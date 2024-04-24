@@ -1,41 +1,363 @@
-<!-- navv to choose -->
-
-<nav class="nav nav-pills flex-column flex-sm-row">
-    <ul class="nav nav-tabs nav-underline">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-    </ul>
-</nav>
-
-<!---------------------------------------------------------------------------------------------------------------------------------------------------->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAP</title>
+    <title>HOME</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="./style.css">
 
+    <!-- internal css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+        @media (max-width: 576px) {
+            .custom-margin-left {
+                margin-left: 6%;
+                /* Adjust the left margin as needed */
+            }
+
+            .custom-margin-left-content {
+                margin-left: 6.8%;
+                /* Adjust the left margin as needed */
+            }
+        }
+
+        /* Preloader CSS */
+
+        .preloader {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 9999;
+        }
+
+        .sbl-cirle-to-rhombus {
+            height: 12px;
+            width: 12px;
+            color: #5a5a5a;
+            position: relative;
+            display: inline-block;
+            border: 5px solid;
+            border-radius: 50%;
+            transform: rotate(45deg);
+            animation: cirle-to-rhombus 1.5s .66s ease-in-out infinite;
+        }
+
+        .sbl-cirle-to-rhombus::before,
+        .sbl-cirle-to-rhombus::after {
+            content: '';
+            height: inherit;
+            width: inherit;
+            border: 5px solid;
+            position: absolute;
+            border-radius: 50%;
+            top: -5px;
+            animation: cirle-to-rhombus 1.5s ease-in-out infinite;
+        }
+
+        .sbl-cirle-to-rhombus::before {
+            left: -30px;
+            top: 20px;
+            animation-delay: .33s;
+        }
+
+        .sbl-cirle-to-rhombus::after {
+            right: -30px;
+            top: -30px;
+            animation-delay: .99s;
+        }
+
+        @keyframes cirle-to-rhombus {
+            50% {
+                border-radius: 0;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <div class="preloaderbody ">
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="sbl-cirle-to-rhombus"></div>
+        </div>
+    </div>
+
+    <special-header></special-header>
+    <!-- <events list -->
+    <div class="container-fluid justify-content-center mt-5 custom-margin-left-content">
+
+        <div class="row container-fluid " style="margin-left: 3.5%;">
+
+            <!-- Paper presentation  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4  ">
+                <div class="card p-1 shadow custom-card">
+                    <img src="image/paperprasentation.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Paper
+                            presentation</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="insidekec.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="outsideKec.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project presentation  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/project.jpg" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Project
+                            Presentation</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Techno Managerial Events -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/techno.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title" style="margin-bottom: 41px;">Techno Managerial Events</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports & Games -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4  ">
+                <div class="card p-1 shadow custom-card">
+                    <img src="image/sport.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Sports &
+                            Games</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEMBERSHIP  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/membership.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">MEMBERSHIP
+                        </h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership/Organizing Events -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/leadership.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title" style="margin-bottom: 18px;">Leadership/Organizing Events</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VAC/Online Courses  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/vac.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title" style="margin-bottom: 41px;">VAC/Online Courses</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project to Paper/Patent/Copyright  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/project.jpg" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title" style="margin-bottom: 18px;">Project to
+                            Paper/Patent/Copyright
+                        </h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  GATE/CAT/GOVT EXAMS  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/gate.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title" style="margin-bottom: 41px;">GATE/CAT/GOVT EXAMS</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  Placement and Internship  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/internship.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Placement and
+                            Internship</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entrepreneurship  -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/entrepreneurship.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">
+                            Entrepreneurship</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social activities -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                <div class=" card p-1 shadow">
+                    <img src="image/social.png" class="card-img-top" alt="...">
+                    <div class="card-body custom-card">
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Social
+                            activities</h5>
+                        <p class="card-text"></p>
+                        <div class="d-flex justify-content-center">
+                            <a href="next_page.html">
+                                <button class="b1">Inside KEC</button>
+                            </a>
+                            <a href="next_page.html">
+                                <button class="b2">Outside KEC</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--End of activities-->
+        </div>
+        <!---end of row-->
+
+    </div>
+    <!--end of content-->
+
+
+    <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./HeaderFooterManager.js"></script>
+
+    <!-- Script to hide preloader after activities page loaded -->
+    <script>
+        // Wait for the page to load completely
+        window.addEventListener('load', function () {
+            // Hide the preloader
+            document.querySelector('.preloader').style.display = 'none';
+        });
+    </script>
 
 </body>
 
