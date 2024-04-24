@@ -1,0 +1,125 @@
+/* Styles for Button 1 */
+.b1 {
+    --border: 5px;
+    /* Border width */
+    --slant: 0.7em;
+    /* Slanted corners size */
+    --color: #06dbf3;
+    /* Button color */
+}
+
+/* Styles for Button 2 */
+.b2 {
+    --border: 5px;
+    /* Border width */
+    --slant: 0.7em;
+    /* Slanted corners size */
+    --color: #058d44;
+    /* Button color */
+
+}
+
+/* Ensure the last button doesn't have extra margin */
+.b2:last-child {
+    margin-right: 0;
+}
+
+
+/* Common styles for both buttons */
+.b1,
+.b2 {
+    font-size: 13px;
+    /* Font size */
+    padding: 0.4em 1.2em;
+    /* Padding */
+    border: none;
+    /* Remove default border */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-weight: bold;
+    /* Bold font weight */
+    color: var(--color);
+    /* Text color */
+    background:
+        linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top right,
+        linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+    /* Gradient background */
+    background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+    /* Background size
+    */
+    background-repeat: no-repeat;
+    /* No repeating background */
+    box-shadow:
+        0 0 0 200px inset var(--s, #0000),
+        /* Inset shadow */
+        0 0 0 var(--border) inset var(--color);
+    /* Border shadow */
+    clip-path:
+        polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+            100% 100%, var(--slant) 100%, 0 calc(100% - var(--slant)));
+    /* Clip path for slanted corners */
+    transition: color var(--t, 0.3s), background-size 0.3s;
+    /* Transition effect */
+    margin-right: 1px;
+    /* space between the buttons */
+
+}
+
+/* Focus styles for buttons */
+button:focus-visible {
+    outline-offset: calc(-1*var(--border));
+    /* Offset outline */
+    outline: var(--border) solid #000c;
+    /* Outline style */
+    clip-path: none;
+    /* Remove clip path */
+    background-size: 0 0;
+    /* Adjust background size */
+}
+
+/* Hover and active styles for buttons */
+button:hover,
+button:active {
+    background-size: 100% 100%;
+    /* Adjust background size */
+    color: #fff;
+    /* Text color on hover/active */
+    --t: 0.2s 0.1s;
+    /* Transition delay */
+}
+
+/* Active styles for buttons */
+button:active {
+    --s: #0005;
+    /* Shadow color on active */
+    transition: none;
+    /* Remove transition */
+}
+
+/* Container styles for buttons */
+.button-container {
+    display: flex;
+    /* Flexbox layout */
+    justify-content: space-evenly;
+    /* Space between buttons */
+    align-items: center;
+    /* Optional: align buttons vertically centered */
+    display: inline;
+    /* Adjust alignment as needed */
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 600px) {
+
+    .b1,
+    .b2 {
+        font-size: 6vw;
+        /* Adjust font size */
+        padding: 2vw 1vw;
+        /* Adjust padding */
+        --border: 1vw;
+        /* Adjust border width */
+        --slant: 2vw;
+        /* Adjust slant size */
+    }
+}
