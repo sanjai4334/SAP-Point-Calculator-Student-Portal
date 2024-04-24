@@ -6,7 +6,7 @@ class SpecialHeader extends HTMLElement {
         <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">  
         <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
 
-        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="./style.css">
 
    
         <div class="sidebar-content">
@@ -22,19 +22,14 @@ class SpecialHeader extends HTMLElement {
                     </button>
 
                     <div class="sidebar-logo">
-                        <a href="#">Profile</a>
+                        <a class="title" href="#">SAP CALCULATOR</a>
                     </div>
                 </div>
 
                 <!-- <inside toggle -->
                 <!-- Profile -->
                 <ul class="sidebar-nav">
-                    <li class="sidebar-item">
-                        <a href="profie.html" class="sidebar-link">
-                            <i class="lni lni-user"></i>
-                            <span>Profile</span>
-                        </a>
-                    </li>
+                    
 
                     <!-- Activities -->
                     <li class="sidebar-item">
@@ -133,7 +128,7 @@ class SpecialHeader extends HTMLElement {
         <!--header-->
         <div class="container-fluid" style="background-color: rgb(254, 254, 254);">
             <div class="row">
-                <div class="col-10 text-center ">
+                <div class="col text-center mt-2 custom-margin-left">
                     <h1 class="display-6">SAP CALCULATOR</h1>
                 </div>
 

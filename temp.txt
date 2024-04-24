@@ -1,1 +1,4 @@
-premium colleges
+Connecting to MongoDB...
+Connected to MongoDB
+undefined document(s) inserted with the _id: 6629174de56c3a456ce9d8d1
+MongoDB connection closed
