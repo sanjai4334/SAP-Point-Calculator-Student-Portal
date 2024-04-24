@@ -50,10 +50,10 @@ app.put('/update', async (req, res) => {
     const collection = database.collection('studentDetails');
 
     const doc = req.body.userDetails;
-    
-    
-    console.log({regno:doc.regno}, { $set: {claimed:doc.claimed} });
-    await collection.updateOne({regno:doc.regno}, { $set: {claimed:doc.claimed} });
+
+
+    console.log({ regno: doc.regno }, { $set: { claimed: doc.claimed } });
+    await collection.updateOne({ regno: doc.regno }, { $set: { claimed: doc.claimed } });
 
     res.sendStatus(200); // Respond with success status
   } catch (err) {
