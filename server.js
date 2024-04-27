@@ -2,6 +2,8 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const bodyParser = require('body-parser');
 const cors = require('cors'); // Include cors package
+const multer = require('multer');
+const path = require('path');
 
 const app = express();
 const port = 3000;
@@ -64,6 +66,30 @@ app.put('/update', async (req, res) => {
   }
 });
 
+
+// Set up multer storage
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/') // Destination folder for uploaded files
+  },
+  filename: function (req, file, cb) {
+    const timestamp = Date.now(); // Get current timestamp
+    const ext = path.extname(file.originalname); // Get file extension
+    const filename = `${timestamp}${ext}`; // Concatenate timestamp and extension
+    cb(null, filename); // Use the new filename
+  }
+});
+
+const upload = multer({ storage: storage });
+
+// Handle POST request to upload file
+app.post('/upload', upload.single('file'), (req, res) => {
+  // File has been uploaded
+  const timestamp = Date.now(); // Get current timestamp
+  const ext = path.extname(req.file.originalname); // Get file extension
+  const newFilename = `${timestamp}${ext}`; // Concatenate timestamp and extension
+  res.send(`http://localhost:3000/uploads/${newFilename}`); // Send the new filename back to the user
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);

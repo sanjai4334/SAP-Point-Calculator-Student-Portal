@@ -29,7 +29,7 @@
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Patent Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected disabled>Select patent type</option>
                                         <option value="sci">SCI Indexed</option>
                                         <option value="wos">WOS / Scopus Journal /
@@ -54,7 +54,7 @@
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleInsideKecSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
                                         SUBMIT
                                     </button>
     

@@ -28,7 +28,7 @@
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Event Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected disabled>Select game</option>
                                         <option value="cricket">Cricket</option>
                                         <option value="badminton">Badminton</option>
@@ -48,16 +48,16 @@
                                 </div>
     
                                 <div class="form-floating mb-3">
-                                    <input type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                    <input name="Match On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
                                         style="text-transform: uppercase;">
                                     <label for="floatingInput">Match on</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
+                                    <input name="Event Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
                                     <label for="floatingInput">Event Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="prizeParticipationDropdown"
+                                    <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
                                         aria-label="Select prize/participation">
                                         <option value="1st">1st Prize</option>
                                         <option value="2nd">2nd Prize</option>
@@ -69,7 +69,7 @@
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleInsideKecSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
                                         SUBMIT
                                     </button>
     

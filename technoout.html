@@ -28,7 +28,7 @@
 
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="">
+                                    <input name="College Name" type="text" class="form-control" id="floatingInput" placeholder="">
                                     <label for="floatingInput">College Name</label>
                                 </div>
                                 <div class="form mb-3">
@@ -38,7 +38,7 @@
                                     <label for="floatingInput">National/International</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Event Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected disabled>Select Event type</option>
                                         <!-- add types like quiz,coding contest... -->
                                         <option value="quiz">Quiz
@@ -50,17 +50,17 @@
                                     <label for="presentationDropdown">Event type</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                    <input name="Presented On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
                                         style="text-transform: uppercase;" required>
                                     <label for="floatingInput">Presented On</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
+                                    <input name="Topic Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
                                     <label for="floatingInput">Topic Name</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="prizeParticipationDropdown"
+                                    <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
                                         aria-label="Select prize/participation">
                                         <option value="1st">1st Prize</option>
                                         <option value="2nd">2nd Prize</option>
@@ -72,7 +72,7 @@
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleInsideKecSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
                                         SUBMIT
                                     </button>
     

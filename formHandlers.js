@@ -174,3 +174,69 @@ async function handleInsideKecSubmit(event) {
         console.error('There was a problem with the fetch operation:', error);
     }
 }
+
+async function handleActivityFormSubmit(event) {
+    event.preventDefault(); // Prevent default form submission behavior
+    
+    const form = event.target.closest('form'); // Find the closest form element
+    
+    if (form) {
+        const formData = {}; // Object to store form data
+        
+        // Iterate through each form control element
+        form.querySelectorAll('input, select, textarea').forEach(input => {
+            const { name, type, value } = input;
+            // Handle different types of inputs differently
+            if (type === 'checkbox') {
+                formData[name] = input.checked; // Store checkbox value as boolean
+            } else if (type === 'radio') {
+                if (input.checked) {
+                    formData[name] = value; // Store the value of the checked radio button
+                }
+            } else if (type === 'select-one') {
+                // Get the selected option
+                const selectedOption = input.options[input.selectedIndex];
+                // Store the name and innerHTML of the selected option
+                formData[name] = selectedOption.innerHTML;
+            } else {
+                formData[name] = value; // Store input value in formData object
+            }
+        });
+        
+        console.log(formData); // Log the collected form data
+
+        const fileInput = form.querySelector('input[type="file"]'); // Find the file input element
+        
+        if (fileInput.files.length === 0) {
+            console.error('No file selected');
+            return;
+        }
+        
+        const file = fileInput.files[0]; // Get the selected file
+        
+        // Create a FormData object to store file data
+        const formFileData = new FormData();
+        formFileData.append('file', file); // Append the file to the FormData object
+        
+        // Use Fetch API to send the file data to the server
+        try {
+            const response = await fetch('http://localhost:3000/upload', {
+                method: 'POST',
+                body: formFileData
+            });
+            
+            if (response.ok) {
+                const responseData = await response.text(); // Get the response data as text
+                console.log('Response:', responseData); // Log the response data
+                
+                // Optionally, perform additional actions after successful upload
+            } else {
+                console.error('Failed to upload file');
+                // Optionally, handle error
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            // Optionally, handle error
+        }
+    }
+}

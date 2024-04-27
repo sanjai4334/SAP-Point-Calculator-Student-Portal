@@ -28,7 +28,7 @@
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Member In" class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected>Club/Association Name</option>
                                         <option value="IEEE Students Branch">IEEE Students Branch
                                         </option>
@@ -105,7 +105,7 @@
                                 
                                 
                                 <div class="form-floating mb-3">
-                                    <select class="form-select" id="prizeParticipationDropdown"
+                                    <select name="Club Type" class="form-select" id="prizeParticipationDropdown"
                                         aria-label="Select prize/participation">
                                         <option value="default" selected disabled>Select club type</option>
                                         <option value="ps">Professional Society</option>
@@ -119,7 +119,7 @@
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleInsideKecSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
                                         SUBMIT
                                     </button>
     
