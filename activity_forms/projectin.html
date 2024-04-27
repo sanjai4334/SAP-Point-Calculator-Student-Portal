@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./HeaderFooterManager.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../HeaderFooterManager.js"></script>
 </head>
 
 <body>
@@ -24,12 +24,13 @@
     
                         <div class="container-fluid" style="padding: 9%;">
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">Leadership /
-                                Organizing Events</h1>
+                                class="text-center">Project
+                                Presentation
+                                Details</h1>
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select name="Member In" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Presented At"  class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected>Club/Association Name</option>
                                         <option value="IEEE Students Branch">IEEE Students Branch
                                         </option>
@@ -100,20 +101,28 @@
                                         <option value="Cloud Users Group">Cloud Users Group</option>
                                         <option value="IELTS Club">IELTS Club</option>
                                     </select>
-                                    <label for="presentationDropdown">Member in</label>
+                                    <label for="presentationDropdown">Presented at</label>
+                                </div>
+    
+                                <div class="form-floating mb-3">
+                                    <input name="Presented On"  type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                        style="text-transform: uppercase;">
+                                    <label for="floatingInput">Presented On</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <select name="Position" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                        <option selected disabled>Select position</option>
-                                        <option value="chairman">Chairman / Secretary / Treasurer</option>
-                                        <option value="secretary">Joint Secretary / Vice Chairman</option>
-                                        <option value="ec">EC Member</option>
-                                        <option value="rep">Class Representative / Placement Coordinator /
-                                            Cell Coordinator / IV or IPT Coordinator</option>
-                                    </select>
-                                    <label for="presentationDropdown">Position</label>
+                                    <input name="Topic Name"  type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
+                                    <label for="floatingInput">Topic Name</label>
                                 </div>
-                                
+                                <div class="form-floating mb-3">
+                                    <select name="Prize/Participation"  class="form-select" id="prizeParticipationDropdown"
+                                        aria-label="Select prize/participation">
+                                        <option value="1st">1st Prize</option>
+                                        <option value="2nd">2nd Prize</option>
+                                        <option value="3rd">3rd Prize</option>
+                                        <option value="Participation">Participation</option>
+                                    </select>
+                                    <label for="prizeParticipationDropdown">Prize/Participation</label>
+                                </div>
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
@@ -140,9 +149,9 @@
         <!--end main content area -->
 
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script>
-        <script src="./formHandlers.js"></script>
+        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="../formHandlers.js"></script>
 </body>
 
 </html>

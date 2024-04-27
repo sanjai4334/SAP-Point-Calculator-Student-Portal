@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./HeaderFooterManager.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../HeaderFooterManager.js"></script>
 </head>
 
 <body>
@@ -24,20 +24,32 @@
     
                         <div class="container-fluid" style="padding: 9%;">
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">GATE / CAT / Govt. Exams</h1>
+                                class="text-center">Project to Paper /
+                                Patent / Copyright</h1>
     
                             <form>
-                                
                                 <div class="form-floating mb-3">
-                                    <select name="Exams" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                        <option selected disabled>Select category</option>
-                                        <option value="chairman">Appeared</option>
-                                        <option value="secretary">Qualified in GATE / CAT</option>
-                                        <option value="ec">Good National ranking in GATE / CAT </option>
-                                        <option value="rep">Cleared Govt. Exams</option>
+                                    <select name="Patent Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                        <option selected disabled>Select patent type</option>
+                                        <option value="sci">SCI Indexed</option>
+                                        <option value="wos">WOS / Scopus Journal /
+                                            Conference</option>
+                                        <option value="other">Other Journal /
+                                            Conference</option>
+                                        <option value="patent">Patent</option>
+                                        <option value="copyright">Copyright</option>
                                     </select>
-                                    <label for="presentationDropdown">Exams</label>
+                                    <label for="presentationDropdown">Patent type</label>
                                 </div>
+                                <div class="form mb-3">
+                                    <input type="radio" name="category" id="floatingInput" value="submitted">
+                                    <label for="floatingInput">Submitted</label>
+                                    <input type="radio" name="category" id="floatingInput" value="published">
+                                    <label for="floatingInput">Published</label>
+                                    <input type="radio" name="category" id="floatingInput" value="obtained">
+                                    <label for="floatingInput">Obtained</label>
+                                </div>
+                                
                                 
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
@@ -59,14 +71,15 @@
                 </div>
             </div>
         
+        
         <!--end of content area-->
         <!--End of body content-->
         <!--end main content area -->
 
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script>
-        <script src="./formHandlers.js"></script>
+        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="../formHandlers.js"></script>
 </body>
 
 </html>

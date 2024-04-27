@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./HeaderFooterManager.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../HeaderFooterManager.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,8 @@
     
                         <div class="container-fluid" style="padding: 9%;">
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">Membership Details</h1>
+                                class="text-center">Leadership /
+                                Organizing Events</h1>
     
                             <form>
                                 <div class="form-floating mb-3">
@@ -101,21 +102,18 @@
                                     </select>
                                     <label for="presentationDropdown">Member in</label>
                                 </div>
-    
-                                
-                                
                                 <div class="form-floating mb-3">
-                                    <select name="Club Type" class="form-select" id="prizeParticipationDropdown"
-                                        aria-label="Select prize/participation">
-                                        <option value="default" selected disabled>Select club type</option>
-                                        <option value="ps">Professional Society</option>
-                                        <option value="club">Tech and Non-Tech Clubs</option>
-                                        <option value="ncc">NCC/NSS</option>
-                                        <option value="society">Societies</option>
-                                        
+                                    <select name="Position" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                        <option selected disabled>Select position</option>
+                                        <option value="chairman">Chairman / Secretary / Treasurer</option>
+                                        <option value="secretary">Joint Secretary / Vice Chairman</option>
+                                        <option value="ec">EC Member</option>
+                                        <option value="rep">Class Representative / Placement Coordinator /
+                                            Cell Coordinator / IV or IPT Coordinator</option>
                                     </select>
-                                    <label for="prizeParticipationDropdown">Club type</label>
+                                    <label for="presentationDropdown">Position</label>
                                 </div>
+                                
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
                                 <div class="d-grid">
@@ -142,9 +140,9 @@
         <!--end main content area -->
 
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script>
-        <script src="./formHandlers.js"></script>
+        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="../formHandlers.js"></script>
 </body>
 
 </html>

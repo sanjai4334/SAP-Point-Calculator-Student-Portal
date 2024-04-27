@@ -7,51 +7,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="./HeaderFooterManager.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <script src="../HeaderFooterManager.js"></script>
 </head>
 
 <body>
     <special-header></special-header>
 
             <!-- inside kec -->
-            
             <div class="main mt-2">
 
 
                 <div class="container-fluid p-2">
                     <div class="container-fluid justify-content-center">
-
+    
                         <div class="container-fluid" style="padding: 9%;">
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">Paper
-                                Presentation
-                                Details</h1>
-
+                                class="text-center">Techno-Managerial Events</h1>
+    
                             <form>
                                 <div class="form-floating mb-3">
-                                    <input name="College Name" type="text" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">College Name</label>
+                                    <select name="Event Type"   class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                        <option selected disabled>Select Event type</option>
+                                        <!-- add types like quiz,coding contest... -->
+                                        <option value="quiz">Quiz
+                                        </option>
+                                        <option value="coding">
+                                            Coding Contest</option>
+                                        <!-- add more -->
+                                    </select>
+                                    <label for="presentationDropdown">Event type</label>
                                 </div>
-                                <div class="form mb-3">
-                                    <input name="Premier/Non-Premier" type="radio" name="category" id="floatingInput" value="premier">
-                                    <label for="floatingInput">Premier</label>
-                                    <input name="Premier/Non-Premier"  type="radio" name="category" id="floatingInput" value="non-premier">
-                                    <label for="floatingInput">Non-Premier</label>
-                                </div>
+    
                                 <div class="form-floating mb-3">
-                                    <input name="Presented On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
-                                        style="text-transform: uppercase;" required>
+                                    <input name="Presented On"   type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                        style="text-transform: uppercase;">
                                     <label for="floatingInput">Presented On</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input name="Topic Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                    <label for="floatingInput">Topic Name</label>
+                                    <input name="Event Name"   type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
+                                    <label for="floatingInput">Event Name</label>
                                 </div>
-
                                 <div class="form-floating mb-3">
-                                    <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
+                                    <select name="Prize/Participation"   class="form-select" id="prizeParticipationDropdown"
                                         aria-label="Select prize/participation">
                                         <option value="1st">1st Prize</option>
                                         <option value="2nd">2nd Prize</option>
@@ -73,9 +72,9 @@
     
                                 </div>
                             </form>
-
+    
                         </div>
-
+    
                     </div>
                 </div>
             </div>
@@ -86,9 +85,9 @@
         <!--end main content area -->
 
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-        <script src="script.js"></script>
-        <script src="./formHandlers.js"></script>
+        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="../formHandlers.js"></script>
 </body>
 
 </html>
