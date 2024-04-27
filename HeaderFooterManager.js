@@ -1,12 +1,23 @@
 class SpecialHeader extends HTMLElement {
     connectedCallback() {
+        // Test if the current file is in a separate folder and assign paths
+        let url = document.URL;
+        let path = "";
+
+        let pattern = /^http.*:[0-9]{4}\/\w+\.html$/ // this will match if there is no foldername between port and page file
+        // It will match http://127.0.0.1:3001/sample.html
+        // But not http://127.0.0.1:3001/folderName/sample.html
+
+        path = (pattern.test(url)) ? "./" : "../"
+
+
         this.innerHTML = `
 
         <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-        <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">  
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="${path}css/bootstrap/bootstrap.min.css">  
+        <script src="${path}js/bootstrap/bootstrap.bundle.min.js"></script>
 
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="${path}style.css">
 
    
         <div class="sidebar-content">
@@ -33,7 +44,7 @@ class SpecialHeader extends HTMLElement {
 
                     <!-- Activities -->
                     <li class="sidebar-item">
-                        <a href="activities.html" class="sidebar-link">
+                        <a href="${path}activities.html" class="sidebar-link">
                             <i class="" style="font-size: 1.15rem; font-weight: 600px;"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                     class="bi bi-activity" viewBox="0 0 16 16">
@@ -46,7 +57,7 @@ class SpecialHeader extends HTMLElement {
 
                     <!-- Reference -->
                     <li class="sidebar-item">
-                        <a href="reference.html" class="sidebar-link">
+                        <a href="${path}reference.html" class="sidebar-link">
                             <i class="" style="font-size: 1.15rem; font-weight: 600px;"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                                     class="bi bi-clipboard-data" viewBox="0 0 16 16">
@@ -97,7 +108,7 @@ class SpecialHeader extends HTMLElement {
                                 <a href="#" class="sidebar-link disabled ">SEMESTER 3</a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="activities.html" class="sidebar-link">SEMESTER 4</a>
+                                <a href="${path}activities.html" class="sidebar-link">SEMESTER 4</a>
                             </li>
                             <li class="sidebar-item">
                                 <a href="#" class="sidebar-link disabled ">SEMESTER 5</a>
@@ -110,7 +121,7 @@ class SpecialHeader extends HTMLElement {
 
                     <!-- Logout -->
                     <!-- <li class="sidebar-item">
-                        <a href="login.html" class="sidebar-link">
+                        <a href="${path}login.html" class="sidebar-link">
                             <i class="lni lni-exit"></i>
                             <span>Logout</span>
                         </a>
@@ -138,11 +149,11 @@ class SpecialHeader extends HTMLElement {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="image/entrepreneurship.png" alt="Profile Image" class="rounded-circle"
+                                <img src="${path}image/entrepreneurship.png" alt="Profile Image" class="rounded-circle"
                                     style="width: 30px; height: 30px; margin-right: 5px;">
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="profie.html">Profile</a></li>
+                                <li><a class="dropdown-item" href="${path}profie.html">Profile</a></li>
                                 <li><a class="dropdown-item" href="#">Log Out</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                             </ul>
@@ -152,7 +163,7 @@ class SpecialHeader extends HTMLElement {
             </div>
         </div>
 
-        <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
+        <script src="${path}js/bootstrap/bootstrap.bundle.min.js"></script>
     </div>
     `;
 
