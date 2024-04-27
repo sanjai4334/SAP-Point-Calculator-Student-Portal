@@ -27,457 +27,300 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="g-col-sm-2">
-
-        <div class="wrapper">
-
-                <!-- sidebar start -->
-                <aside id="sidebar" class="position-fixed mr-5">
-                    <div class="d-flex">
-        
-                        <!-- toggle button -->
-                        <button class="toggle-btn" type="button">
-                            <i class="lni lni-grid-alt"></i>
-                        </button>
-        
-                        <div class="sidebar-logo">
-                            <a href="#">Activities</a>
-                        </div>
-                    </div>
-        
-                    <!-- <inside toggle -->
-                    <!-- Profile -->
-                    <ul class="sidebar-nav">
-                        <li class="sidebar-item">
-                            <a href="profie.html" class="sidebar-link">
-                                <i class="lni lni-user"></i>
-                                <span>Profile</span>
-                            </a>
-                        </li>
-        
-                        <!-- Activities -->
-                        <li class="sidebar-item">
-                            <a href="activities.html" class="sidebar-link">
-                                <i class="" style="font-size: 1.15rem; font-weight: 600px;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-activity" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2" />
-                                    </svg></i>
-                                <span>Activities</span>
-                            </a>
-                        </li>
-        
-                        <!-- Reference -->
-                        <li class="sidebar-item">
-                            <a href="reference.html" class="sidebar-link">
-                                <i class="" style="font-size: 1.15rem; font-weight: 600px;"><svg
-                                        xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                        class="bi bi-clipboard-data" viewBox="0 0 16 16">
-                                        <path
-                                            d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z" />
-                                        <path
-                                            d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z" />
-                                        <path
-                                            d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z" />
-                                    </svg></i>
-                                <span>Reference</span>
-                            </a>
-                        </li>
-        
-                        <!-- Check Status -->
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link">
-                                <i class="bi bi-clipboard2-check" style="font-size: 1.15rem;
-                                font-weight: 600px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
-                                        <path
-                                            d="M9.5 0a.5.5 0 0 1 .5.5.5.5 0 0 0 .5.5.5.5 0 0 1 .5.5V2a.5.5 0 0 1-.5.5h-5A.5.5 0 0 1 5 2v-.5a.5.5 0 0 1 .5-.5.5.5 0 0 0 .5-.5.5.5 0 0 1 .5-.5z" />
-                                        <path
-                                            d="M3 2.5a.5.5 0 0 1 .5-.5H4a.5.5 0 0 0 0-1h-.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1H12a.5.5 0 0 0 0 1h.5a.5.5 0 0 1 .5.5v12a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5z" />
-                                        <path
-                                            d="M10.854 7.854a.5.5 0 0 0-.708-.708L7.5 9.793 6.354 8.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0z" />
-                                    </svg></i>
-                                <span>Check Status</span>
-                            </a>
-                        </li>
-        
-                        <!-- SEMESTER -->
-                        <li class="sidebar-item">
-                            <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
-                                data-bs-target="#sem" aria-expanded="false" aria-controls="sem">
-                                <i class="bi bi-mortarboard" style="font-size: 1.15rem;
-                                font-weight: 600px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-mortarboard" viewBox="0 0 16 16">
-                                        <path
-                                            d="M8.211 2.047a.5.5 0 0 0-.422 0l-7.5 3.5a.5.5 0 0 0 .025.917l7.5 3a.5.5 0 0 0 .372 0L14 7.14V13a1 1 0 0 0-1 1v2h3v-2a1 1 0 0 0-1-1V6.739l.686-.275a.5.5 0 0 0 .025-.917zM8 8.46 1.758 5.965 8 3.052l6.242 2.913z" />
-                                        <path
-                                            d="M4.176 9.032a.5.5 0 0 0-.656.327l-.5 1.7a.5.5 0 0 0 .294.605l4.5 1.8a.5.5 0 0 0 .372 0l4.5-1.8a.5.5 0 0 0 .294-.605l-.5-1.7a.5.5 0 0 0-.656-.327L8 10.466zm-.068 1.873.22-.748 3.496 1.311a.5.5 0 0 0 .352 0l3.496-1.311.22.748L8 12.46z" />
-                                    </svg></i>
-                                <span>SEMESTER</span>
-                            </a>
-                            <ul id="sem" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link disabled ">SEMESTER 3</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="activities.html" class="sidebar-link">SEMESTER 4</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link disabled ">SEMESTER 5</a>
-                                </li>
-                                <li class="sidebar-item">
-                                    <a href="#" class="sidebar-link disabled ">SEMESTER 6</a>
-                                </li>
-                            </ul>
-                        </li>
-        
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-        
-                        <!-- Logout -->
-                        <li class="sidebar-item">
-                            <a href="login.html" class="sidebar-link">
-                                <i class="lni lni-exit"></i>
-                                <span>Logout</span>
-                            </a>
-                        </li>
-                    </ul>
-        
-                    <div class="sidebar-footer">
-                    </div>
-                </aside>
-                <!-- side bar end -->
-        </div>
+    <div>
+        <special-header></special-header>
     </div>
 
-        <!--main content area -->
-        <!--Body content-->
-        <div class="main p-2">
+    <!-- sap Index -->
+    <div class="container-fluid ms-5 p-2">
+        <div class="container">
 
-            <!--content area-->
-            <div class="container text-center rounded-2 p-3 bg-white" style="background-color:white;">
-                <h1 class="display-6">
-                    SAP CALCULATOR
-                </h1>
+            <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
+                class="text-center display-6 mt-5 ">SAP Index</h1>
 
-                <!-- home nav area -->
-                <!-- <nav class="nav flex-column flex-sm-row" style="margin-left: 1%;">
-                    <ul class="nav nav-tabs nav-underline ">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="activities.html">Activities</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active " href="reference.html">Reference</a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li> -->
-                    </ul>
-                </nav>
-            </div>
-
-            <!-- sap Index -->
-            <div class="container-fluid ms-5 p-2">
-                <div class="container">
-
-                    <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                        class="text-center">SAP Index</h1>
-
-                </div>
-                <br>
-                <div class="table-responsive">
-                    <!-- paper -->
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Submitted</th>
-                            <th class="text-center bg-secondary text-white" colspan="3">Presented</th>
-                            <th class="text-center bg-secondary text-white" colspan="3">Prizes</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
-
-                        </tr>
-
-                        <tr>
-                            <th class="text-center bg-secondary text-white">Inside</th>
-                            <th class="text-center bg-secondary text-white">Outside</th>
-                            <th class="text-center bg-secondary text-white">Premier</th>
-                            <th class="text-center bg-secondary text-white">Inside</th>
-                            <th class="text-center bg-secondary text-white">Outside</th>
-                            <th class="text-center bg-secondary text-white">Premier</th>
-                        </tr>
-
-
-
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Paper Presentation</td>
-                            <td class="p-4 text-center bg-white">2</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">75</td>
-                        </tr>
-
-                        <!-- project -->
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Project Presentation</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">15</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-                    <!-- techno -->
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
-                            <th class="text-center bg-secondary text-white" colspan="4">Participated</th>
-
-                            <th class="text-center bg-secondary text-white" colspan="4">Prizes</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
-
-                        </tr>
-
-                        <tr>
-                            <th class="text-center bg-secondary text-white">Inside</th>
-                            <th class="text-center bg-secondary text-white">Outside</th>
-                            <th class="text-center bg-secondary text-white">State</th>
-                            <th class="text-center bg-secondary text-white">National /<br>International</th>
-                            <th class="text-center bg-secondary text-white">Inside</th>
-                            <th class="text-center bg-secondary text-white">Outside</th>
-                            <th class="text-center bg-secondary text-white">State</th>
-                            <th class="text-center bg-secondary text-white">National /<br>International</th>
-
-                        </tr>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Techno-Managerial</td>
-                            <td class="p-4 text-center bg-white">2</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">75</td>
-                        </tr>
-                        <!-- Sports -->
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Sports & Games</td>
-                            <td class="p-4 text-center bg-white">2</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">50 / 100</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">40</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!--Membership-->
-                    <table class="table table-bordered">
-                        <th class="text-center bg-secondary text-white">Activity</th>
-                        <th class="text-center bg-secondary text-white">NCC / NSS</th>
-                        <th class="text-center bg-secondary text-white">Professional Society</th>
-                        <th class="text-center bg-secondary text-white">Clubs</th>
-                        <th class="text-center bg-secondary text-white">Society</th>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Membership</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">2</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                        </tr>
-                    </table>
-
-                    <!-- Leadership -->
-                    <table class="table table-bordered">
-                        <th class="text-center bg-secondary text-white">Activity</th>
-                        <th class="text-center bg-secondary text-white">Chairman / Secretary / Treasurer etc.</th>
-                        <th class="text-center bg-secondary text-white">Joint Secretary / Vice Chairman etc.</th>
-                        <th class="text-center bg-secondary text-white">EC Member</th>
-                        <th class="text-center bg-secondary text-white">Class Representative / Placement Coordinator
-                            /<br>Cell
-                            Coordinator / IV or IPT Coordinator</th>
-                        <th class="text-center bg-secondary text-white">Max Points</th>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Leadership /<br> Organizing Events
-                            </td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!-- Credit courses -->
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Non-Credit Course<br>(Value
-                                Added)
-                            </th>
-                            <th class="text-center bg-secondary text-white" colspan="3">Phyical / Online Course <br>like
-                                NPTEL
-                                etc.</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
-                        </tr>
-                        <tr>
-                            <th class="text-center bg-secondary text-white">One Credit Course</th>
-                            <th class="text-center bg-secondary text-white">Two Credit Course</th>
-                            <th class="text-center bg-secondary text-white">More than two credit courses</th>
-                        </tr>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">VAC / Online Courses</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!-- patent -->
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
-                            <th class="text-center bg-secondary text-white" colspan="2">SCI Indexed</th>
-                            <th class="text-center bg-secondary text-white" colspan="2">WOS / Scopus Journal /
-                                <br>Conference
-                            </th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Other Journal / <br>Conference
-                            </th>
-                            <th class="text-center bg-secondary text-white" colspan="3">Patent</th>
-                            <th class="text-center bg-secondary text-white" colspan="2">Copyright</th>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
-                        </tr>
-                        <tr>
-                            <th class="text-center bg-secondary text-white">Submitted</th>
-                            <th class="text-center bg-secondary text-white">Published</th>
-                            <th class="text-center bg-secondary text-white">Submitted</th>
-                            <th class="text-center bg-secondary text-white">Published</th>
-                            <th class="text-center bg-secondary text-white">Applied</th>
-                            <th class="text-center bg-secondary text-white">Published</th>
-                            <th class="text-center bg-secondary text-white">Obtained</th>
-                            <th class="text-center bg-secondary text-white">Applied</th>
-                            <th class="text-center bg-secondary text-white">Published</th>
-                        </tr>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Project to Paper / <br>Patent /
-                                Copyright
-                            </td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!-- gate -->
-                    <table class="table table-bordered">
-                        <th class="text-center bg-secondary text-white">Activity</th>
-                        <th class="text-center bg-secondary text-white">Appeared</th>
-                        <th class="text-center bg-secondary text-white">Qualified in GATE / <br>CAT etc.</th>
-                        <th class="text-center bg-secondary text-white">Good National ranking <br>in GATE / CAT etc.
-                        </th>
-                        <th class="text-center bg-secondary text-white">Cleared Govt. Exams</th>
-                        <th class="text-center bg-secondary text-white">Max Points</th>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">GATE / CAT / Govt. Exams</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!-- placement -->
-                    <table class="table table-bordered">
-                        <th class="text-center bg-secondary text-white">Activity</th>
-                        <th class="text-center bg-secondary text-white">Written Test cleared</th>
-                        <th class="text-center bg-secondary text-white">Placed</th>
-                        <th class="text-center bg-secondary text-white">Placed with Internship</th>
-                        <th class="text-center bg-secondary text-white">Internship without Placement</th>
-                        <th class="text-center bg-secondary text-white">Max Points</th>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold font-weight-bold">Placement and Internship</td>
-                            <td class="p-4 text-center bg-white">5 (max: 20)</td>
-                            <td class="p-4 text-center bg-white">40</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">20</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                        </tr>
-                    </table>
-
-                    <!-- entrepreneur -->
-                    <table class="table table-bordered">
-                        <th class="text-center bg-secondary text-white">Activity</th>
-                        <th class="text-center bg-secondary text-white">Workshop Attended</th>
-                        <th class="text-center bg-secondary text-white">Registered for Startup</th>
-                        <th class="text-center bg-secondary text-white">Released Product</th>
-                        <th class="text-center bg-secondary text-white">Max Points</th>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Entrepreneurship</td>
-                            <td class="p-4 text-center bg-white">10</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                            <td class="p-4 text-center bg-white">100</td>
-                        </tr>
-                    </table>
-
-                    <!-- social activities -->
-                    <table class="table table-bordered">
-                        <tr>
-                            <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
-                            <th class="text-center bg-secondary text-white" colspan="4">Community services</th>
-                        </tr>
-                        <tr>
-                            <th class="text-center bg-secondary text-white">Activities such as Blood donation</th>
-                            <th class="text-center bg-secondary text-white">1 to 2 weeks <br>(NCC or NSS) camp</th>
-                            <th class="text-center bg-secondary text-white">More than 2 weeks</th>
-                            <th class="text-center bg-secondary text-white">Max Points</th>
-                        </tr>
-                        <tr>
-                            <td class="p-4 text-center font-weight-bold bg-white">Social Activities</td>
-                            <td class="p-4 text-center bg-white">5</td>
-                            <td class="p-4 text-center bg-white">30</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                            <td class="p-4 text-center bg-white">50</td>
-                        </tr>
-                    </table>
-                </div>
-
-            </div>
         </div>
+        <br>
+        <div class="table-responsive container-fluid ">
+            <!-- paper -->
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Submitted</th>
+                    <th class="text-center bg-secondary text-white" colspan="3">Presented</th>
+                    <th class="text-center bg-secondary text-white" colspan="3">Prizes</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
+
+                </tr>
+
+                <tr>
+                    <th class="text-center bg-secondary text-white">Inside</th>
+                    <th class="text-center bg-secondary text-white">Outside</th>
+                    <th class="text-center bg-secondary text-white">Premier</th>
+                    <th class="text-center bg-secondary text-white">Inside</th>
+                    <th class="text-center bg-secondary text-white">Outside</th>
+                    <th class="text-center bg-secondary text-white">Premier</th>
+                </tr>
+
+
+
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Paper Presentation</td>
+                    <td class="p-4 text-center bg-white">2</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">75</td>
+                </tr>
+
+                <!-- project -->
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Project Presentation</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">15</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+            <!-- techno -->
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
+                    <th class="text-center bg-secondary text-white" colspan="4">Participated</th>
+
+                    <th class="text-center bg-secondary text-white" colspan="4">Prizes</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
+
+                </tr>
+
+                <tr>
+                    <th class="text-center bg-secondary text-white">Inside</th>
+                    <th class="text-center bg-secondary text-white">Outside</th>
+                    <th class="text-center bg-secondary text-white">State</th>
+                    <th class="text-center bg-secondary text-white">National /<br>International</th>
+                    <th class="text-center bg-secondary text-white">Inside</th>
+                    <th class="text-center bg-secondary text-white">Outside</th>
+                    <th class="text-center bg-secondary text-white">State</th>
+                    <th class="text-center bg-secondary text-white">National /<br>International</th>
+
+                </tr>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Techno-Managerial</td>
+                    <td class="p-4 text-center bg-white">2</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">75</td>
+                </tr>
+                <!-- Sports -->
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Sports & Games</td>
+                    <td class="p-4 text-center bg-white">2</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">50 / 100</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">40</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!--Membership-->
+            <table class="table table-bordered">
+                <th class="text-center bg-secondary text-white">Activity</th>
+                <th class="text-center bg-secondary text-white">NCC / NSS</th>
+                <th class="text-center bg-secondary text-white">Professional Society</th>
+                <th class="text-center bg-secondary text-white">Clubs</th>
+                <th class="text-center bg-secondary text-white">Society</th>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Membership</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">2</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                </tr>
+            </table>
+
+            <!-- Leadership -->
+            <table class="table table-bordered">
+                <th class="text-center bg-secondary text-white">Activity</th>
+                <th class="text-center bg-secondary text-white">Chairman / Secretary / Treasurer etc.</th>
+                <th class="text-center bg-secondary text-white">Joint Secretary / Vice Chairman etc.</th>
+                <th class="text-center bg-secondary text-white">EC Member</th>
+                <th class="text-center bg-secondary text-white">Class Representative / Placement Coordinator
+                    /<br>Cell
+                    Coordinator / IV or IPT Coordinator</th>
+                <th class="text-center bg-secondary text-white">Max Points</th>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Leadership /<br> Organizing Events
+                    </td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!-- Credit courses -->
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Non-Credit Course<br>(Value
+                        Added)
+                    </th>
+                    <th class="text-center bg-secondary text-white" colspan="3">Phyical / Online Course <br>like
+                        NPTEL
+                        etc.</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
+                </tr>
+                <tr>
+                    <th class="text-center bg-secondary text-white">One Credit Course</th>
+                    <th class="text-center bg-secondary text-white">Two Credit Course</th>
+                    <th class="text-center bg-secondary text-white">More than two credit courses</th>
+                </tr>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">VAC / Online Courses</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!-- patent -->
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
+                    <th class="text-center bg-secondary text-white" colspan="2">SCI Indexed</th>
+                    <th class="text-center bg-secondary text-white" colspan="2">WOS / Scopus Journal /
+                        <br>Conference
+                    </th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Other Journal / <br>Conference
+                    </th>
+                    <th class="text-center bg-secondary text-white" colspan="3">Patent</th>
+                    <th class="text-center bg-secondary text-white" colspan="2">Copyright</th>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Max Points</th>
+                </tr>
+                <tr>
+                    <th class="text-center bg-secondary text-white">Submitted</th>
+                    <th class="text-center bg-secondary text-white">Published</th>
+                    <th class="text-center bg-secondary text-white">Submitted</th>
+                    <th class="text-center bg-secondary text-white">Published</th>
+                    <th class="text-center bg-secondary text-white">Applied</th>
+                    <th class="text-center bg-secondary text-white">Published</th>
+                    <th class="text-center bg-secondary text-white">Obtained</th>
+                    <th class="text-center bg-secondary text-white">Applied</th>
+                    <th class="text-center bg-secondary text-white">Published</th>
+                </tr>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Project to Paper / <br>Patent /
+                        Copyright
+                    </td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!-- gate -->
+            <table class="table table-bordered">
+                <th class="text-center bg-secondary text-white">Activity</th>
+                <th class="text-center bg-secondary text-white">Appeared</th>
+                <th class="text-center bg-secondary text-white">Qualified in GATE / <br>CAT etc.</th>
+                <th class="text-center bg-secondary text-white">Good National ranking <br>in GATE / CAT etc.
+                </th>
+                <th class="text-center bg-secondary text-white">Cleared Govt. Exams</th>
+                <th class="text-center bg-secondary text-white">Max Points</th>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">GATE / CAT / Govt. Exams</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!-- placement -->
+            <table class="table table-bordered">
+                <th class="text-center bg-secondary text-white">Activity</th>
+                <th class="text-center bg-secondary text-white">Written Test cleared</th>
+                <th class="text-center bg-secondary text-white">Placed</th>
+                <th class="text-center bg-secondary text-white">Placed with Internship</th>
+                <th class="text-center bg-secondary text-white">Internship without Placement</th>
+                <th class="text-center bg-secondary text-white">Max Points</th>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold font-weight-bold">Placement and Internship</td>
+                    <td class="p-4 text-center bg-white">5 (max: 20)</td>
+                    <td class="p-4 text-center bg-white">40</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">20</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                </tr>
+            </table>
+
+            <!-- entrepreneur -->
+            <table class="table table-bordered">
+                <th class="text-center bg-secondary text-white">Activity</th>
+                <th class="text-center bg-secondary text-white">Workshop Attended</th>
+                <th class="text-center bg-secondary text-white">Registered for Startup</th>
+                <th class="text-center bg-secondary text-white">Released Product</th>
+                <th class="text-center bg-secondary text-white">Max Points</th>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Entrepreneurship</td>
+                    <td class="p-4 text-center bg-white">10</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                    <td class="p-4 text-center bg-white">100</td>
+                </tr>
+            </table>
+
+            <!-- social activities -->
+            <table class="table table-bordered">
+                <tr>
+                    <th class="text-center bg-secondary text-white" rowspan="2">Activity</th>
+                    <th class="text-center bg-secondary text-white" colspan="4">Community services</th>
+                </tr>
+                <tr>
+                    <th class="text-center bg-secondary text-white">Activities such as Blood donation</th>
+                    <th class="text-center bg-secondary text-white">1 to 2 weeks <br>(NCC or NSS) camp</th>
+                    <th class="text-center bg-secondary text-white">More than 2 weeks</th>
+                    <th class="text-center bg-secondary text-white">Max Points</th>
+                </tr>
+                <tr>
+                    <td class="p-4 text-center font-weight-bold bg-white">Social Activities</td>
+                    <td class="p-4 text-center bg-white">5</td>
+                    <td class="p-4 text-center bg-white">30</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                    <td class="p-4 text-center bg-white">50</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    </div>
 
 
 
@@ -492,7 +335,7 @@
 
 
     <script src="./js/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="HeaderFooterManager.js"></script>
 </body>
 
 </html>
