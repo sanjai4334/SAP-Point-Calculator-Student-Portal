@@ -109,44 +109,8 @@ function eraseCookie(name) {
     document.cookie = name + '=; Max-Age=-99999999;';
 }
 
-async function handleInsideKecSubmit(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
-
-    var userDataJSON = getCookie('userData');
-
-    var userData = JSON.parse(userDataJSON);
-    
-    prizeParticipation = document.getElementById("prizeParticipationDropdown");
-
-    points = 0;
-
-    switch (prizeParticipation.selectedIndex) {
-        case 0:
-            console.log("Winner");
-            points = 20;
-            break;
-        case 1:
-            console.log("Winner");
-            points = 20;
-            break;
-        case 2:
-            console.log("Winner");
-            points = 20;
-            break;
-        default:
-            console.log("Participation");
-            points = 5;
-            break;
-    }
-    
-    userData.claimed = Number(userData.claimed) + points;
+async function updateUserDataInDatabase(userData) {    
     console.log(userData);
-    
-    // Convert user data to JSON
-    var userDataJSON = JSON.stringify(userData);
-
-    // Set the user data as a cookie
-    setCookie('userData', userDataJSON, 30); // Assuming the cookie should expire in 30 days
 
     // Send AJAX request to server
     try {
@@ -159,13 +123,7 @@ async function handleInsideKecSubmit(event) {
         });
 
 
-        if (response.ok) {
-            const responseData = await response.json();
-            if (responseData) {
-                console.log(responseData);
-            }
-            window.location.href = "./activities.html";
-        } else {
+        if (!response.ok) {
             // Server error
             throw new Error('Network response was not ok.');
         }
@@ -177,7 +135,16 @@ async function handleInsideKecSubmit(event) {
 
 async function handleActivityFormSubmit(event) {
     event.preventDefault(); // Prevent default form submission behavior
-    
+
+    var userDataJSON = getCookie('userData');
+    var userData = JSON.parse(userDataJSON);
+
+    // Create a FormData object to store file data
+    const formFileData = new FormData();
+
+    // Append the registration number to the FormData object
+    formFileData.append('regno', userData.regno);
+
     const form = event.target.closest('form'); // Find the closest form element
     
     if (form) {
@@ -214,9 +181,8 @@ async function handleActivityFormSubmit(event) {
         
         const file = fileInput.files[0]; // Get the selected file
         
-        // Create a FormData object to store file data
-        const formFileData = new FormData();
-        formFileData.append('file', file); // Append the file to the FormData object
+        // Append the file to the FormData object
+        formFileData.append('file', file);
         
         // Use Fetch API to send the file data to the server
         try {
@@ -226,10 +192,9 @@ async function handleActivityFormSubmit(event) {
             });
             
             if (response.ok) {
-                const responseData = await response.text(); // Get the response data as text
-                console.log('Response:', responseData); // Log the response data
-                
-                // Optionally, perform additional actions after successful upload
+                const responseData = await response.json();
+                const filename = responseData.filename;
+                formData.proof = filename; // Add filename to form data
             } else {
                 console.error('Failed to upload file');
                 // Optionally, handle error
@@ -238,5 +203,34 @@ async function handleActivityFormSubmit(event) {
             console.error('Error:', error);
             // Optionally, handle error
         }
+
+        // Remove the filename stored in formData
+        delete formData[""];
+
+        // Fixing spaces in presented at
+        formData["Presented At"] = formData["Presented At"].replaceAll(/(%20)+/g, " ")
+
+        // Add the collected form data to user data object
+        if (userData.submissions) {
+            userData.submissions = [...userData.submissions, formData];;
+        } else {
+            userData.submissions = [formData];
+        }
+        console.log(userData);
+
+        // Convert user data to JSON
+        var userDataJSON = JSON.stringify(userData);
+
+        // Set the user data as a cookie
+        setCookie('userData', userDataJSON, 30); // Assuming the cookie should expire in 30 days
+
+        // test
+        userData.text = true;
+
+        // Update user data in the database
+        updateUserDataInDatabase(userData);
+
+        // Go back to activities page
+        window.location.href = '../activities.html';
     }
 }

@@ -54,8 +54,12 @@ app.put('/update', async (req, res) => {
     const doc = req.body.userDetails;
 
 
-    console.log({ regno: doc.regno }, { $set: { claimed: doc.claimed } });
-    await collection.updateOne({ regno: doc.regno }, { $set: { claimed: doc.claimed } });
+    console.log({ regno: doc.regno }, { $set: doc });
+    
+    // Remove _id from doc since it cannot be updated
+    delete doc._id;
+
+    await collection.updateOne({ regno: doc.regno }, { $set: doc });
 
     res.sendStatus(200); // Respond with success status
   } catch (err) {
@@ -73,10 +77,16 @@ const storage = multer.diskStorage({
     cb(null, 'uploads/') // Destination folder for uploaded files
   },
   filename: function (req, file, cb) {
-    const timestamp = Date.now(); // Get current timestamp
-    const ext = path.extname(file.originalname); // Get file extension
-    const filename = `${timestamp}${ext}`; // Concatenate timestamp and extension
-    cb(null, filename); // Use the new filename
+    // Extract registration number from request body
+    const regno = req.body.regno;
+    // Get current timestamp
+    const timestamp = Date.now();
+    // Get file extension
+    const ext = path.extname(file.originalname);
+    // Construct new filename
+    const filename = `${regno}_${timestamp}${ext}`;
+    // Pass the new filename to multer
+    cb(null, filename);
   }
 });
 
@@ -85,10 +95,10 @@ const upload = multer({ storage: storage });
 // Handle POST request to upload file
 app.post('/upload', upload.single('file'), (req, res) => {
   // File has been uploaded
-  const timestamp = Date.now(); // Get current timestamp
-  const ext = path.extname(req.file.originalname); // Get file extension
-  const newFilename = `${timestamp}${ext}`; // Concatenate timestamp and extension
-  res.send(`http://localhost:3000/uploads/${newFilename}`); // Send the new filename back to the user
+  // Get the filename from req.file
+  const filename = req.file.filename;
+  // Send the filename back to the client
+  res.json({ filename });
 });
 
 app.listen(port, () => {
