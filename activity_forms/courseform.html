@@ -26,39 +26,37 @@
                     <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
                         class="text-center">VAC/Online Courses</h1>
 
-                    <form>
-                        <div class="form-floating mb-3">
-                            <select name="Course Type" class="form-select" id="presentationDropdown"
-                                aria-label="Select presentation">
-                                <option selected disabled>Select course type</option>
-                                <option value="vac">Value-Added Course</option>
-                                <option value="c1">One-Credit Course</option>
-                                <option value="c2">Two-Credit Course</option>
-                                <option value="morec">More than 2 credit course</option>
-                            </select>
-                            <label for="presentationDropdown">Course Type</label>
-                        </div>
-
-                        <div class="form-floating mb-3">
-                            <input name="Course Name" type="text" class="form-control" id="floatingInput"
-                                placeholder="Course Name">
-                            <label for="floatingInput">Course Name</label>
-                        </div>
-
-                        <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                        <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                        <div class="d-grid">
-                            <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit"
-                                onclick="handleActivityFormSubmit(event)">
-                                SUBMIT
-                            </button>
-
-                            <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
-                                onclick="window.history.back();">CANCEL
-                            </button>
-
-                        </div>
-                    </form>
+                        <form>
+                            <div class="form-floating mb-3">
+                                <select name="Course Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <option selected disabled>Select course type</option>
+                                    <option value="vac">Value-Added Course</option>
+                                    <option value="c1">One-Credit Course</option>
+                                    <option value="c2">Two-Credit Course</option>
+                                    <option value="morec">More than 2 credit course</option>
+                                </select>
+                                <label for="presentationDropdown">Course Type</label>
+                            </div>
+                        
+                            <div class="form-floating mb-3">
+                                <input name="Course Name" type="text" class="form-control" id="floatingInput" placeholder="Course Name">
+                                <label for="floatingInput">Course Name</label>
+                            </div>
+                        
+                            <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                            <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                            <span id="invalid-input" class="text-danger"></span>
+                        
+                            <div class="d-grid">
+                                <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);courseVal(event)">
+                                    SUBMIT
+                                </button>
+                        
+                                <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
+                                        onclick="window.history.back();">CANCEL
+                                </button>
+                            </div>
+                        </form>
 
                 </div>
 

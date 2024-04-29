@@ -28,50 +28,54 @@
                                 Presentation
                                 Outside KEC</h1>
 
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <input name="College Name"  type="text" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">College Name</label>
-                                </div>
-                                <div class="form mb-3">
-                                    <input type="radio" name="category" id="floatingInput" value="premier">
-                                    <label for="floatingInput">Premier</label>
-                                    <input type="radio" name="category" id="floatingInput" value="non-premier">
-                                    <label for="floatingInput">Non-Premier</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="Presented On"  type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
-                                        style="text-transform: uppercase;" required>
-                                    <label for="floatingInput">Presented On</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="Topic Name"  type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                    <label for="floatingInput">Topic Name</label>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <select name="Prize/Participation"  class="form-select" id="prizeParticipationDropdown"
-                                        aria-label="Select prize/participation">
-                                        <option value="1st">1st Prize</option>
-                                        <option value="2nd">2nd Prize</option>
-                                        <option value="3rd">3rd Prize</option>
-                                        <option value="Participation">Participation</option>
-                                    </select>
-                                    <label for="prizeParticipationDropdown">Prize/Participation</label>
-                                </div>
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
-                                        SUBMIT
-                                    </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
-                                    onclick="window.history.back();">CANCEL
-                                    </button>
-    
-                                </div>
-                            </form>
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <input name="College Name" type="text" class="form-control" id="collegeNameInput" placeholder="">
+                                        <label for="collegeNameInput">College Name</label>
+                                    </div>
+                                
+                                    <div class="form mb-3">
+                                        <input type="radio" name="category" id="premierRadio" value="premier">
+                                        <label for="premierRadio">Premier</label>
+                                        <input type="radio" name="category" id="nonPremierRadio" value="non-premier">
+                                        <label for="nonPremierRadio">Non-Premier</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <input name="Presented On" type="date" class="form-control" id="presentedOnInput" placeholder="DD/MM/YYYY">
+                                        <label for="presentedOnInput">Presented On</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <input name="Topic Name" type="text" class="form-control" id="topicNameInput" placeholder="Topic Name">
+                                        <label for="topicNameInput">Topic Name</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown" aria-label="Select prize/participation">
+                                            <option selected disabled>Select prize/participation</option>
+                                            <option value="1st">1st Prize</option>
+                                            <option value="2nd">2nd Prize</option>
+                                            <option value="3rd">3rd Prize</option>
+                                            <option value="Participation">Participation</option>
+                                        </select>
+                                        <label for="prizeParticipationDropdown">Prize/Participation</label>
+                                    </div>
+                                
+                                    <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                                    <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                    <span id="invalid-input" class="text-danger"></span>
+                                
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);projectoutVal(event)">
+                                            SUBMIT
+                                        </button>
+                                
+                                        <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
+                                                onclick="window.history.back();">CANCEL
+                                        </button>
+                                    </div>
+                                </form>
 
                         </div>
 

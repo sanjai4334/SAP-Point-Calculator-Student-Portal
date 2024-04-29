@@ -28,24 +28,24 @@
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select name="Event Type"   class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Event Type"   class="form-select" id="eventTypeDropdown" aria-label="Select presentation">
                                         <option selected disabled>Select Event type</option>
                                         <!-- add types like quiz,coding contest... -->
                                         <option value="quiz">Quiz</option>
                                         <option value="coding">Coding Contest</option>
                                         <!-- add more -->
                                     </select>
-                                    <label for="presentationDropdown">Event type</label>
+                                    <label for="eventTypeDropdown">Event type</label>
                                 </div>
     
                                 <div class="form-floating mb-3">
-                                    <input name="Presented On"   type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                    <input name="Presented On"   type="date" class="form-control" id="presentedOnInput" placeholder="DD/MM/YYYY"
                                         style="text-transform: uppercase;">
-                                    <label for="floatingInput">Presented On</label>
+                                    <label for="presentedOnInput">Presented On</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input name="Event Name"   type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                    <label for="floatingInput">Event Name</label>
+                                    <input name="Event Name"   type="text" class="form-control" id="eventNameInput" placeholder="DD-MM-YYYY">
+                                    <label for="eventNameInput">Event Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
                                     <select name="Prize/Participation"   class="form-select" id="prizeParticipationDropdown"
@@ -59,8 +59,10 @@
                                 </div>
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                <span id="invalid-input" class="text-danger"></span>
+
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);techinVal(event)">
                                         SUBMIT
                                     </button>
     

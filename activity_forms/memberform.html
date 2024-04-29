@@ -28,7 +28,7 @@
     
                             <form>
                                 <div class="form-floating mb-3">
-                                    <select name="Member In" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                    <select name="Member In" class="form-select" id="memberDropdown" aria-label="Select presentation">
                                         <option selected>Club/Association Name</option>
                                         <option value="IEEE Students Branch">IEEE Students Branch</option>
                                         <option value="Centre for Entrepreneurship & Incubation">Centre for Entrepreneurship & Incubation</option>
@@ -56,13 +56,13 @@
                                         <option value="Cloud Users Group">Cloud Users Group</option>
                                         <option value="IELTS Club">IELTS Club</option>
                                     </select>
-                                    <label for="presentationDropdown">Member in</label>
+                                    <label for="memberDropdown">Member in</label>
                                 </div>
     
                                 
                                 
                                 <div class="form-floating mb-3">
-                                    <select name="Club Type" class="form-select" id="prizeParticipationDropdown"
+                                    <select name="Club Type" class="form-select" id="clubTypeDropdown"
                                         aria-label="Select prize/participation">
                                         <option value="default" selected disabled>Select Club type</option>
                                         <option value="ps">Professional Society</option>
@@ -71,12 +71,13 @@
                                         <option value="society">Societies</option>
                                         
                                     </select>
-                                    <label for="prizeParticipationDropdown">Club type</label>
+                                    <label for="clubTypeDropdown">Club type</label>
                                 </div>
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                <span id="invalid-input" class="text-danger"></span>
                                 <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);memberformVal(event)">
                                         SUBMIT
                                     </button>
     
