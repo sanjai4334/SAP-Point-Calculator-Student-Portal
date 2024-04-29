@@ -154,7 +154,7 @@ class SpecialHeader extends HTMLElement {
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="${path}profie.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                <li><a class="dropdown-item" href="${path}login.html">Log Out</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                             </ul>
                         </li>
