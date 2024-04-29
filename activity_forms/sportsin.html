@@ -26,59 +26,62 @@
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
                                 class="text-center">Sports & Games Inside KEC</h1>
     
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <select name="Event Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                        <option selected disabled>Select game</option>
-                                        <option value="cricket">Cricket</option>
-                                        <option value="badminton">Badminton</option>
-                                        <option value="tabletennis">Table Tennis</option>
-                                        <option value="volleyball">Volleyball</option>
-                                        <option value="kabaddi">Kabaddi</option>
-                                        <option value="fieldhockey">Field Hockey</option>
-                                        <option value="archery">Archery</option>
-                                        <option value="karate">Karate</option>
-                                        <option value="taekwondo">Taekwondo</option>
-                                        <option value="fencing">Fencing</option>
-                                        <option value="rugby">Rugby</option>
-                                        <option value="gymnastics">Gymnastics</option>
-                                        <!-- add more -->
-                                    </select>
-                                    <label for="presentationDropdown">Event type</label>
-                                </div>
-    
-                                <div class="form-floating mb-3">
-                                    <input name="Match On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
-                                        style="text-transform: uppercase;">
-                                    <label for="floatingInput">Match on</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="Event Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                    <label for="floatingInput">Event Name</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
-                                        aria-label="Select prize/participation">
-                                        <option value="1st">1st Prize</option>
-                                        <option value="2nd">2nd Prize</option>
-                                        <option value="3rd">3rd Prize</option>
-                                        <option value="Participation">Participation</option>
-                                    </select>
-                                    <label for="prizeParticipationDropdown">Prize/Participation</label>
-                                </div>
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
-                                        SUBMIT
-                                    </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
-                                    onclick="window.history.back();">CANCEL
-                                    </button>
-    
-                                </div>
-                            </form>
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <select name="Event Type" class="form-select" id="eventTypeDropdown" aria-label="Select presentation">
+                                            <option selected disabled>Select game</option>
+                                            <option value="cricket">Cricket</option>
+                                            <option value="badminton">Badminton</option>
+                                            <option value="tabletennis">Table Tennis</option>
+                                            <option value="volleyball">Volleyball</option>
+                                            <option value="kabaddi">Kabaddi</option>
+                                            <option value="fieldhockey">Field Hockey</option>
+                                            <option value="archery">Archery</option>
+                                            <option value="karate">Karate</option>
+                                            <option value="taekwondo">Taekwondo</option>
+                                            <option value="fencing">Fencing</option>
+                                            <option value="rugby">Rugby</option>
+                                            <option value="gymnastics">Gymnastics</option>
+                                            <!-- add more -->
+                                        </select>
+                                        <label for="eventTypeDropdown">Event type</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <input name="Match On" type="date" class="form-control" id="matchOnInput">
+                                        <label for="matchOnInput">Match on</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <input name="Event Name" type="text" class="form-control" id="eventNameInput" placeholder="Event Name">
+                                        <label for="eventNameInput">Event Name</label>
+                                    </div>
+                                
+                                    <div class="form-floating mb-3">
+                                        <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown" aria-label="Select prize/participation">
+                                            <option selected disabled>Select prize/participation</option>
+                                            <option value="1st">1st Prize</option>
+                                            <option value="2nd">2nd Prize</option>
+                                            <option value="3rd">3rd Prize</option>
+                                            <option value="Participation">Participation</option>
+                                        </select>
+                                        <label for="prizeParticipationDropdown">Prize/Participation</label>
+                                    </div>
+                                
+                                    <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                                    <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                    <span id="invalid-input" class="text-danger"></span>
+                                
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);sportsinVal(event)">
+                                            SUBMIT
+                                        </button>
+                                
+                                        <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
+                                        onclick="window.history.back();">CANCEL
+                                        </button>
+                                    </div>
+                                </form>
     
                         </div>
     
