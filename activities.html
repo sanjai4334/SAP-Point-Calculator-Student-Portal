@@ -27,8 +27,13 @@
             }
         }
 
-        /* Preloader CSS */
+        /* Ensure no horizontal scroll */
+        body, 
+        html {
+            overflow-x: hidden;
+        }
 
+        /* Preloader CSS */
         .preloader {
             display: flex;
             align-items: center;
@@ -51,7 +56,7 @@
             border: 5px solid;
             border-radius: 50%;
             transform: rotate(45deg);
-            animation: cirle-to-rhombus 1.5s .66s ease-in-out infinite;
+            animation: cirle-to-rhombus 1.5s ease-in-out infinite;
         }
 
         .sbl-cirle-to-rhombus::before,
@@ -66,24 +71,10 @@
             animation: cirle-to-rhombus 1.5s ease-in-out infinite;
         }
 
-        .sbl-cirle-to-rhombus::before {
-            left: -30px;
-            top: 20px;
-            animation-delay: .33s;
-        }
-
-        .sbl-cirle-to-rhombus::after {
-            right: -30px;
-            top: -30px;
-            animation-delay: .99s;
-        }
-
         @keyframes cirle-to-rhombus {
             50% {
                 border-radius: 0;
             }
-
-            /* end of preload css */
         }
     </style>
 </head>
@@ -114,11 +105,11 @@
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="./activity_forms/paperin.html">
-                                <button class="b1">Inside KEC</button>
+                                <button class="b1">ENTER</button>
                             </a>
-                            <a href="./activity_forms/paperout.html">
+                            <!-- <a href="./activity_forms/paperout.html">
                                 <button class="b2">Outside KEC</button>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
