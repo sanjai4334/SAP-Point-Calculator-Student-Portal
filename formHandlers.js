@@ -207,8 +207,7 @@ async function handleActivityFormSubmit(event) {
         // Remove the filename stored in formData
         delete formData[""];
 
-        // Fixing spaces in presented at
-        formData["Presented At"] = formData["Presented At"].replaceAll(/(%20)+/g, " ")
+        formData["points"] = await calculatePoints(event);
 
         // Add the collected form data to user data object
         if (userData.submissions) {
@@ -230,10 +229,311 @@ async function handleActivityFormSubmit(event) {
         // Update user data in the database
         updateUserDataInDatabase(userData);
 
-        // Go back to activities page
-        window.location.href = '../activities.html';
     }
 }
 
 
-// removed validation
+async function calculatePoints(event) {
+    const form = event.target.closest('form'); // Find the closest form element
+    let selectElement;
+    let selectedValue;
+    let radioElement;
+    let radioSelectedValue;
+
+
+    let points = 0;
+
+    console.log(form.name);
+
+    switch (form.name) {
+        case 'courseform':
+            selectElement = form.querySelector('select[name="Course Type"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'vac':
+                    points = 5;
+                    break;
+                case 'c1':
+                    points = 10;
+                    break;
+                case 'c2':
+                    points = 20;
+                    break;
+                case 'morec':
+                    points = 30;
+                    break;
+            }
+            break;
+        
+        case 'entrepreneur':
+            rm.querySelector('select[name="Progress level"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'workshop':
+                    points = 10;
+                    break;
+                case 'reg':
+                    points = 50;
+                    break;
+                case 'relesed':
+                    points = 100;
+                    break;
+            }
+            break;
+
+        case 'examform':
+            rm.querySelector('select[name="Exams"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'appeared':
+                    points = 5;
+                    break;
+                case 'qualified':
+                    points = 30;
+                    break;
+                case 'ranked':
+                    points = 100;
+                    break;
+                case 'cleared':
+                    points = 100;
+                    break;
+            }
+            break;
+
+        case 'leadform':
+            selectElement = form.querySelector('select[name="Position"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'chairman':
+                    points = 30;
+                    break;
+                case 'vice':
+                    points = 20;
+                    break;
+                case 'ec':
+                    points = 10;
+                    break;
+                case 'rep':
+                    points = 10;
+                    break;
+            }
+            break;
+        
+        case 'memberform':
+            selectElement = form.querySelector('select[name="Club Type"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'ps':
+                    points = 5;
+                    break;
+                case 'club':
+                    points = 2;
+                    break;
+                case 'ncc':
+                    points = 20;
+                    break;
+            }
+            break;
+        
+        case 'paperin':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+
+            if (selectedValue == 'Participation') {
+                points = 5;
+            } else {
+                points = 20;
+            }
+            break;
+        
+        case 'paperout':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+            radioElement = form.querySelector('input[name="category"]:checked');
+            radioSelectedValue = radioElement.value;
+
+
+            if (selectedValue == 'Participation') {
+                if (radioSelectedValue == 'premier') {
+                    points = 20;
+                } else {
+                    points = 10;
+                }
+            } else {
+                if (radioSelectedValue == 'premier') {
+                    points = 50;
+                } else {
+                    points = 30;
+                }
+            }
+            break;
+        
+        case 'patentform':
+            // only max scores are given for simplicity
+            selectElement = form.querySelector('select[name="Patent Type"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'sci':
+                    points = 50;
+                    break;
+                case 'wos':
+                    points = 30;
+                    break;
+                case 'other':
+                    points = 5;
+                    break;
+                case 'patent':
+                    points = 100;
+                    break;
+                case 'copyright':
+                    points = 10;
+                    break;
+            }
+            break;
+        
+        case 'Placement and Internship':
+            selectElement = form.querySelector('select[name="Category"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'clr':
+                    points = 5;
+                    break;
+                case 'placed':
+                    points = 40;
+                    break;
+                case 'intern':
+                    points = 50;
+                    break;
+                case 'placeout':
+                    points = 20;
+                    break;
+            }
+            break;
+        
+        case 'projectin':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+
+            if (selectedValue == 'Participation') {
+                points = 10;
+            } else {
+                points = 20;
+            }
+            break;
+        
+        case 'projectout':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+            radioElement = form.querySelector('input[name="category"]:checked');
+            radioSelectedValue = radioElement.value;
+
+
+            if (selectedValue == 'Participation') {
+                if (radioSelectedValue == 'premier') {
+                    points = 20;
+                } else {
+                    points = 10;
+                }
+            } else {
+                if (radioSelectedValue == 'premier') {
+                    points = 50;
+                } else {
+                    points = 30;
+                }
+            }
+            break;
+
+        case 'Social Activities':
+            selectElement = form.querySelector('select[name="Community Services"]');
+            selectedValue = selectElement.value;
+
+            switch (selectedValue) {
+                case 'blood':
+                    points = 5;
+                    break;
+                case 'camp':
+                    points = 30;
+                    break;
+                case 'morecamp':
+                    points = 50;
+                    break;
+            }
+            break;
+        
+        case 'sportsin':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+
+            if (selectedValue == 'Participation') {
+                points = 2;
+            } else {
+                points = 5;
+            }
+            break;
+
+        case 'sportsout':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+            radioElement = form.querySelector('input[name="category"]:checked');
+            radioSelectedValue = radioElement.value;
+
+
+            if (selectedValue == 'Participation') {
+                if (radioSelectedValue == 'premier') {
+                    points = 20;
+                } else {
+                    points = 10;
+                }
+            } else {
+                if (radioSelectedValue == 'premier') {
+                    points = 40;
+                } else {
+                    points = 20;
+                }
+            }
+            break;
+
+        case 'technoin':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+
+            if (selectedValue == 'Participation') {
+                points = 2;
+            } else {
+                points = 10;
+            }
+            break;
+
+        case 'technoout':
+            selectElement = form.querySelector('select[name="Prize/Participation"]');
+            selectedValue = selectElement.value;
+            radioElement = form.querySelector('input[name="category"]:checked');
+            radioSelectedValue = radioElement.value;
+
+
+            if (selectedValue == 'Participation') {
+                if (radioSelectedValue == 'premier') {
+                    points = 10;
+                } else {
+                    points = 5;
+                }
+            } else {
+                if (radioSelectedValue == 'premier') {
+                    points = 30;
+                } else {
+                    points = 20;
+                }
+            }
+            break;
+        }
+    console.log(points);
+    
+    return points;
+}
