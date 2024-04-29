@@ -234,3 +234,6 @@ async function handleActivityFormSubmit(event) {
         window.location.href = '../activities.html';
     }
 }
+
+
+// removed validation
