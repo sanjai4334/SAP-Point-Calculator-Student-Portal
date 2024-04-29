@@ -123,3 +123,29 @@ button:active {
         /* Adjust slant size */
     }
 }
+
+/* css for card -minimum height */
+
+.card {
+    min-height: 395px; /* Adjust to your desired minimum height */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    flex-grow: 1; /* Allows the title to take up available space */
+}
+
+.card-text {
+    flex-grow: 1; /* Ensures space is distributed evenly */
+}
+
+.d-flex {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
