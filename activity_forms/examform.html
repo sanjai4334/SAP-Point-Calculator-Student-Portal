@@ -26,33 +26,32 @@
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
                                 class="text-center">GATE / CAT / Govt. Exams</h1>
     
-                                <form>
-                                    <div class="form-floating mb-3">
-                                        <select name="Exams" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                            <option selected disabled>Select category</option>
-                                            <option value="chairman">Appeared</option>
-                                            <option value="secretary">Qualified in GATE / CAT</option>
-                                            <option value="ec">Good National ranking in GATE / CAT </option>
-                                            <option value="rep">Cleared Govt. Exams</option>
-                                        </select>
-                                        <label for="presentationDropdown">Exams</label>
-                                    </div>
+                            <form>
                                 
-                                    <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                    <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                    <span id="invalid-input" class="text-danger"></span>
+                                <div class="form-floating mb-3">
+                                    <select name="Exams" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                        <option selected disabled>Select category</option>
+                                        <option value="chairman">Appeared</option>
+                                        <option value="secretary">Qualified in GATE / CAT</option>
+                                        <option value="ec">Good National ranking in GATE / CAT </option>
+                                        <option value="rep">Cleared Govt. Exams</option>
+                                    </select>
+                                    <label for="presentationDropdown">Exams</label>
+                                </div>
                                 
-                                    <div class="d-grid">
-                                        <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);examformval(event)">
-                                            SUBMIT
-                                        </button>
-                                
-                                        <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
-                                                onclick="window.history.back();">CANCEL
-                                        </button>
-                                    </div>
-                                </form>
-                                
+                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                <div class="d-grid">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
+                                        SUBMIT
+                                    </button>
+    
+                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
+                                    onclick="window.history.back();">CANCEL
+                                    </button>
+    
+                                </div>
+                            </form>
     
                         </div>
     

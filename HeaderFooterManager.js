@@ -5,8 +5,8 @@ class SpecialHeader extends HTMLElement {
         let path = "";
 
         let pattern = /^http.*:[0-9]{4}\/\w+\.html$/ // this will match if there is no foldername between port and page file
-        // It will match http://127.0.0.1:3001/sample.html
-        // But not http://127.0.0.1:3001/folderName/sample.html
+            // It will match http://127.0.0.1:3001/sample.html
+            // But not http://127.0.0.1:3001/folderName/sample.html
 
         path = (pattern.test(url)) ? "./" : "../"
 
@@ -74,7 +74,7 @@ class SpecialHeader extends HTMLElement {
 
                     <!-- Check Status -->
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="checkstatus.html" class="sidebar-link">
                             <i class="bi bi-clipboard2-check" style="font-size: 1.15rem;
                             font-weight: 600px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
@@ -154,7 +154,7 @@ class SpecialHeader extends HTMLElement {
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="${path}profie.html">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                <li><a class="dropdown-item" href="${path}login.html">Log Out</a></li>
                                 <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                             </ul>
                         </li>
@@ -169,7 +169,7 @@ class SpecialHeader extends HTMLElement {
 
         // Add event listener for hamburger button
         const hamBurger = this.querySelector(".toggle-btn");
-        hamBurger.addEventListener("click", function () {
+        hamBurger.addEventListener("click", function() {
             document.querySelector("#sidebar").classList.toggle("expand");
         });
 
