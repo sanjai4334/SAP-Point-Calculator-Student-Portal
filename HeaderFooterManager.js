@@ -149,7 +149,7 @@ class SpecialHeader extends HTMLElement {
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="${path}image/entrepreneurship.png" alt="Profile Image" class="rounded-circle"
+                                <img src="${path}image/vac.jpg" alt="Profile Image" class="rounded-circle"
                                     style="width: 30px; height: 30px; margin-right: 5px;">
                             </a>
                             <ul class="dropdown-menu">
