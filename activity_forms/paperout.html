@@ -15,80 +15,436 @@
 <body>
     <special-header></special-header>
 
-            <!-- inside kec -->
-            
-            <div class="main mt-2">
+    <!-- inside kec -->
+
+    <div class="main mt-2">
 
 
-                <div class="container-fluid p-2">
-                    <div class="container-fluid justify-content-center">
+        <div class="container-fluid p-2">
+            <div class="container-fluid justify-content-center">
 
-                        <div class="container-fluid" style="padding: 9%;">
-                            <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">Paper
-                                Presentation
-                                Outside KEC</h1>
+                <div class="container-fluid" style="padding: 9%;">
+                    <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-center">Paper Presentation Details
+                    </h1>
 
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <input name="College Name" type="text" class="form-control" id="floatingInput" placeholder="">
-                                    <label for="floatingInput">College Name</label>
-                                </div>
-                                <div class="form mb-3">
-                                    <input name="Premier/Non-Premier" type="radio" name="category" id="floatingInput" value="premier">
-                                    <label for="floatingInput">Premier</label>
-                                    <input name="Premier/Non-Premier"  type="radio" name="category" id="floatingInput" value="non-premier">
-                                    <label for="floatingInput">Non-Premier</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="Presented On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
-                                        style="text-transform: uppercase;" required>
-                                    <label for="floatingInput">Presented On</label>
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <input name="Topic Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                    <label for="floatingInput">Topic Name</label>
-                                </div>
+                    <form>
+                        <div class="form-floating mb-3">
+                            <input name="College Name" type="text" class="form-control" id="floatingInput" placeholder="">
 
-                                <div class="form-floating mb-3">
-                                    <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
-                                        aria-label="Select prize/participation">
+                            <label for="floatingInput">College Name</label>
+                            <select name="colleges" id="colleges" class="form-control">
+                                    <option value="AUCEG"><a href="#">University Departments of Anna University, Chennai - CEG Campus, Sardar Patel Road, Guindy, Chennai 600 025</a></option>
+                                    <option value="AUCMIT"><a href="#">University Departments of Anna University, Chennai - MIT Campus, Chrompet, Tambaram Taluk, Chengalpattu District 600 044</a></option>
+                                    <option value="PSG"><a href="#">PSG COLLEGE OF TECHNOLOGY, PEELAMEDU, COIMBATORE - 641004</a></option>
+                                    <option value="SSNCE"><a href="#">Sri Sivasubramaniya Nadar College of Engineering (Autonomous), Kalavakkam, Old Mahabalipuram Road (OMR), Chengalpattu District 603110</a></option>
+                                    <option value="CIT"><a href="#">Coimbatore Institute of Technology (Autonomous), Civil Aerodrome Post, Coimbatore District 641014</a></option>
+                                    <option value="TCE"><a href="#">Thiagarajar College of Engineering (Autonomous),Tirupparankundram, Madurai District 625015</a></option>
+                                    <option value="GCT"><a href="#">Government College of Technology (Autonomous), Thadagam Road, Coimbatore District 641013</a></option>
+                                    <option value="PSGITAR"><a href="#">PSG Institute of Technology and Applied Research, Avinashi Road, Neelambur, Coimbatore 641062</a></option>
+                                    <option value="SVC"><a href="#">Sri Venkateswara College of Engineering (Autonomous), Post Bag No.1, Chennai-Bengaluru High Road, Pennalur, Irungattukottai S.O., Sriperumbudur Taluk, Kancheepuram District 602117</a></option>
+                                    <option value="KCT"><a href="#">Kumaraguru College of Technology (Autonomous), Chinnavedampatti Post, Coimbatore District 641006</a></option>
+                                    <option value="GCE"><a href="#">Government College of Engineering (Autonomous), Karuppur, Salem District 636011</a></option>
+                                    <option value="LICET"><a href="#">Loyola-ICAM College of Engineering and Technology, Loyola College Campus, Nungambakkam, Chennai 600034</a></option>
+                                    <option value="SKCET"><a href="#">Sri Krishna College of Engineering and Technology (Autonomous) , Kuniamuthur, Coimbatore District 641008</a></option>
+                                    <option value="SJC"><a href="#">St. Joseph’s College of Engineering (Autonomous), Old Mahabalipuram Road (OMR), Chennai 600 119</a></option>
+                                    <option value="RMK"><a href="#">R M K Engineering College (Autonomous), Kavaraipettai, Gummidipoondi, Thiruvallur District 601206</a></option>
+                                    <option value="ACCET"><a href="#">Alagappa Chettair Government College of Engineering and Technology (Autonomous), Karaikudi, Sivagangai District 630004</a></option>
+                                    <option value="EEC"><a href="#">Easwari Engineering College (Autonomous), Ramapuram, Chennai 600089</a></option>
+                                    <option value="GCTN"><a href="#">Government College of Engineering, Tirunelveli District 627007</a></option>
+                                    <option value="SSIT"><a href="#">Sri Sairam Engineering College (Autonomous), West Tambaram, Chennai 600044</a></option>
+                                    <option value="REC"><a href="#">Rajalakshmi Engineering College (Autonomous), Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105</a></option>
+                                    <option value="KEC"><a href="#">Kongu Engineering College (Autonomous), Perundurai, Erode District 638052</a></option>
+                                    <option value="MSEC"><a href="#">Meenakshi Sundararajan Engineering College, Kodambakkam, Chennai 600024</a></option>
+                                    <option value="AURCC"><a href="#">Anna University Regional Campus - Coimbatore, Maruthamalai Main Road, Navavoor Bharathiyar University Post, Somayampalayam, Coimbatore District 641046</a></option>
+                                    <option value="MSEC"><a href="#">Mepco Schlenk Engineering College (Autonomous), Sivakasi, Virudhunagar District 626005</a></option>
+                                    <option value="CIT"><a href="#">Chennai Institute of Technology, Puduper Village, Nandambakkam Post, Kundrathur, Chennai 600069</a></option>
+                                    <option value="BAIT"><a href="#">Bannari Amman Institute of Technology (Autonomous), Sathyamanagalam, Erode District 638401</a></option>
+                                    <option value="VCET"><a href="#">Velammal College of Engineering and Technology, Madurai District 625009</a></option>
+                                    <option value="RMDEC"><a href="#">R M D Engineering College (Autonomous), Kavaraipettai, Gummidipoondi, Thiruvallur District 601206</a></option>
+                                    <option value="SREC"><a href="#">Sri Ramakrishna Engineering College (Autonomous), Vattamalaipalayam, Coimbatore District 641022</a></option>
+                                    <option value="PEC"><a href="#">Panimalar Engineering College (Autonomous), Nazarethpet, Poonamallee, Chennai 602103</a></option>
+                                    <option value="SKCT"><a href="#">Sri Krishna College of Technology (Autonomous) , Kovaipudur Post, Coimbatore District 641042</a></option>
+                                    <option value="UCE"><a href="#">University College of Engineering, Tiruchirappalli, (Bharathidasan Institute of Technology), Tiruchirappalli District 620024</a></option>
+                                    <option value="GCEB"><a href="#">Government College of Engineering (Autonomous), Bargur, Krishnagiri District 635104</a></option>
+                                    <option value="GEC"><a href="#">Government Engineering College (Formerly Institute of Road and Transport Technology), Vasavi College Post, Erode District 638316</a></option>
+                                    <option value="GCE"><a href="#">Government College of Engineering, Srirangam, Sethurappatti, Tiruchirappalli District 620012</a></option>
+                                    <option value="MCET"><a href="#">Dr. Mahalingam College of Engineering and Technology (Autonomous), Mackinaickenpatti Post, Pollachi Taluk, Coimbatore District 642003</a></option>
+                                    <option value="VEC"><a href="#">Velammal Engineering College (Autonomous), Ambattur- Redhills Road, Chennai 600066</a></option>
+                                    <option value="TGPIT"><a href="#">Thanthai Periyar Government Institute of Technology, Bagayam, Vellore District 632002</a></option>
+                                    <option value="RMKCET"><a href="#">R M K College of Engineering and Technology (Autonomous), Puduvoyal, Gummidipoondi Taluk, Thiruvallur District 601206</a></option>
+                                    <option value="UCEK"><a href="#">University College of Engineering, Kancheepuram, Ponnerikarai Campus, NH4, Chennai-Bangalore Highway, Karaipettai Village & Post, Kancheepuram District 631552</a></option>
+                                    <option value="SCT"><a href="#">Sona College of Technology (Autonomous), Suramangalam Post, Salem District 636005</a></option>
+                                    <option value="SCET"><a href="#">Saranathan College of Engineering, Panjappur, Tiruchirappalli District 620012</a></option>
+                                    <option value="SJIT"><a href="#">St. Josephs Institute of Technology, Jeppiaar Nagar, Old Mahabalipuram Road (OMR), Chennai 600119</a></option>
+                                    <option value="SEC"><a href="#">Sri Eshwar College of Engineering (Autonomous), Kondampatti Post, Vadasithur (Via), Kinathukadavu, Coimbatore District 641202</a></option>
+                                    <option value="NEC"><a href="#">National Engineering College (Autonomous), Kovilpatti, Thoothukudi District 628503</a></option>
+                                    <option value="SRMVEC"><a href="#">SRM Valliammai Engineering College (Autonomous), Kattankulathur, Chennai 603203</a></option>
+                                    <option value="SSRIT"><a href="#">Sri Sai Ram Institute of Technology (Autonomous), West Tambaram, Chennai 600044</a></option>
+                                    <option value="AURCM"><a href="#">Anna University Regional Campus - Madurai, Kanyakumari National Highway, Keelakuilkudi, Madurai District 625019</a></option>
+                                    <option value="PSNA"><a href="#">P S N A College of Engineering and Technology, Dindigul District 624622</a></option>
+                                    <option value="VSBE"><a href="#">V S B Engineering College, Kovai Road, Karur District 639111</a></option>
+                                    <option value="MKE"><a href="#">M Kumarasamy College of Engineering (Autonomous), Thalavapalayam, Karur District 639113</a></option>
+                                    <option value="GCEChettikkarai"><a href="#">Government College of Engineering, Chettikkarai Post, Dharmapuri District 635704</a></option>
+                                    <option value="PIT"><a href="#">Panimalar Institute of Technology, Nazarethpet, Poonamallee, Chennai 602103</a></option>
+                                    <option value="JEC"><a href="#">Jeppiar Engineering College, Old Mahabalipuram Road (OMR), Chennai 600119</a></option>
+                                    <option value="KCE"><a href="#">Karpagam College of Engineering (Autonomous), Othakkalmandapam, Coimbatore District 641032</a></option>
+                                    <option value="GCEThanjavur"><a href="#">Government College of Engineering, Gandarvakottai Road, Sengipatti, Thanjavur District 613402</a></option>
+                                    <option value="RIT"><a href="#">Ramco Institute of Technology, North venganallur Village, Krishnapuram Panchayat, Rajapalayam, Virudhunagar District 626117</a></option>
+                                    <option value="KCET"><a href="#">Kongunadu College of Engineering and Technology (Autonomous), Tholurpatti, Thottiyam, Tiruchirappalli District 621215</a></option>
+                                    <option value="SEC"><a href="#">Saveetha Engineering College (Autonomous), Thandalam, Sriperumpudur Taluk, Kancheepuram District 602105</a></option>
+                                    <option value="AURCTirunelveli"><a href="#">Anna University Regional Campus - Tirunelveli, Trivandrum Road, Palayamkottai, Tirunelveli District 627007</a></option>
+                                    <option value="UCEVillupuram"><a href="#">University College of Engineering, Villupuram, Kakuppam, Villupuram District 605103</a></option>
+                                    <option value="VCE"><a href="#">Velalar College of Engineering and Technology (Autonomous), Thindal Post, Erode District 638009</a></option>
+                                    <option value="KPRIET"><a href="#">K P R Institute of Engineering and Technology (Autonomous), Kollupalayam Village, Arasur Panchayat, Coimbatore District 641407</a></option>
+                                    <option value="RIT"><a href="#">Rajalakshmi Institute of Technology, Irulapalayam, Kuthampakkam Post, Kancheepuram District 602107</a></option>
+                                    <option value="KLNCE"><a href="#">K L N College of Engineering (Autonomous), Pottapalayam, Sivagangai District 630611</a></option>
+                                    <option value="KRCE"><a href="#">K Ramakrishnan College of Engineering (Autonomous), Kariyamanickam Road, Samayapuram, Manachanallur Taluk, Tiruchirappalli District 621112</a></option>
+                                    <option value="VTMDS"><a href="#">Vel Tech Multi Tech Dr. Rangarajan Dr. Sakunthala Engineering College (Autonomous), Avadi-Alamathi Road, Chennai 600 062</a></option>
+                                    <option value="GCEBodinayakkanur"><a href="#">Government College of Engineering, Melachokkanathapuram, Bodinayakkanur, Theni District 625582</a></option>
+                                    <option value="SSIET"><a href="#">Sri Shakthi Institute of Engineering and Technology (Autonomous), L&T Bye-Pass, Venkitapuram Post, Comibatore District 641062</a></option>
+                                    <option value="UCENagercoil"><a href="#">University College of Engineering, Nagercoil, Nagercoil Industrial Estate, Konam, Kanyakumari District 629004</a></option>
+                                    <option value="KIT"><a href="#">Knowledge Institute of Technology, KIOT Campus, Kakapalayam Post, Salem District 637504</a></option>
+                                    <option value="PSVP"><a href="#">Prince Shri Venkateshwara Padmavathy Engineering College, Ponmar, Chennai 600048</a></option>
+                                    <option value="AA-MEC"><a href="#">Anjalai Ammal-Mahalingam Engineering College, Kovilvenni, Thiruvarur District 614403</a></option>
+                                    <option value="ACET"><a href="#">Adhi College of Engineering and Technology, Pazhayaseevaram, Madura Sankarapuram Village, Kancheepuram District 631605</a></option>
+                                    <option value="VIT"><a href="#">Velammal Institute of Technology, Chennai-Kolkatta Highway, Panchetti Village, Ponneri Taluk, Thiruvallur District 601204</a></option>
+                                    <option value="KCGCT"><a href="#">K C G College of Technology, Karappakkam, Chennai 600096</a></option>
+                                    <option value="NGPIT"><a href="#">Dr. N G P Institute of Technology, Kalapatti Road, Coimbatore District 641035</a></option>
+                                    <option value="SRIT"><a href="#">Sri Ramakrishna Institute of Technology (Autonomous), Pachapalayam, Coimbatore District 641010</a></option>
+                                    <option value="AVCCE"><a href="#">A V C College of Engineering, Mannampandal Post, Mayiladuthurai District 609305</a></option>
+                                    <option value="JIOT"><a href="#">Jeppiaar Institute of Technology, Kunnam Village, Sriperumpudur Taluk, Kancheepuram District 631604</a></option>
+                                    <option value="SXCE"><a href="#">St. Xavier Catholic College of Engineering, Chunkankadai, Nagercoil, Kanyakumari District 629807</a></option>
+                                    <option value="KKIT"><a href="#">Kalaignar Karunanidhi Institute of Technology (Autonomous), Kannampalayam, Coimbatore District 641402</a></option>
+                                    <option value="HCET"><a href="#">Hindusthan College of Engineering and Technology (Autonomous), Othakkalmandapam Post, Coimbatore District 641032</a></option>
+                                    <option value="KCET"><a href="#">Kamaraj College of Engineering and Technology (Autonomous), Virudhunagar District 626001</a></option>
+                                    <option value="KSRCT"><a href="#">K S Rangasamy College of Technology (Autonomous), Tiruchengode, Namakkal District 637215</a></option>
+                                    <option value="UCETindivanam"><a href="#">University College of Engineering, Tindivanam, Melpakkam, Tindivanam, Villupuram District 604001</a></option>
+                                    <option value="UCEArni"><a href="#">University College of Engineering, Arni, Arni to Devikapuram Road, Thatchur, Arni, Thiruvannamalai District 632326</a></option>
+                                    <option value="NEC"><a href="#">Nandha Engineering College (Autonomous), Pitchandampalayam Post, Erode District 638052</a></option>
+                                    <option value="KIT"><a href="#">Karpagam Institute of Technology, Seerapalayam Village, L&T By pass Road, Coimbatore District 641021</a></option>
+                                    <option value="SNST"><a href="#">S N S College of Technology (Autonomous), Kalappatti Post, Coimbatore District 641035</a></option>
+                                    <option value="SRMTRP"><a href="#">SRM TRP Engineering College, Irungalur, Manachanallur Taluk, Tiruchirappalli District 621105</a></option>
+                                    <option value="VELTECH"><a href="#">Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College (Autonomous), Avadi-Alamathi Road, Chennai 600 062</a></option>
+                                    <option value="FXEC"><a href="#">Francis Xavier Engineering College (Autonomous), Vannarpettai, Tirunelveli District 627003</a></option>
+                                    <option value="MNMEC"><a href="#">Misrimal Navajee Munoth Jain Engineering College, Rajiv Gandhi Salai (OMR), Thorappakkam, Chennai 600096</a></option>
+                                    <option value="VSBCET"><a href="#">V S B College of Engineering Technical Campus, Ealur Pirivu, Solavampalayam Post, Coimbatore District 642109</a></option>
+                                    <option value="SSMIET"><a href="#">SSM Institute of Engineering and Technology, Kuttathupatti Village, Sindalaigundu Post, Dindigul District 624002</a></option>
+                                    <option value="UCED"><a href="#">University College of Engineering, Dindigul, Mangarai Pirivu, Reddiyarchathiram, Dindigul District 624622</a></option>
+                                    <option value="PACET"><a href="#">P A College of Engineering and Technology (Autonomous), Palladam Road, Pollachi, Coimbatore District 642002</a></option>
+                                    <option value="ACE"><a href="#">Adhiyamaan College of Engineering (Autonomous), Hosur, Krishnagiri District 635109</a></option>
+                                    <option value="AMCET"><a href="#">Annai Mira College of Engineering and Technology, Arcot Road, Arappakkam Village, Walaja Taulk, Ranipet District 632 517</a></option>
+                                    <option value="KGIT"><a href="#">KGISL Institute of Technology, KGISL Campus, Thudiyalur Road, Saravanampatti, Coimbatore District 641035</a></option>
+                                    <option value="SAAEC"><a href="#">S A Engineering College (Autonomous), Thiruverkadu, Chennai 600077</a></option>
+                                    <option value="CIET"><a href="#">Coimbatore Institute of Engineering and Technology (Autonomous), Narasipuram Post, Coimbatore District 641109</a></option>
+                                    <option value="PERIIT"><a href="#">PERI Institute of Technology, Mannivakkam, West Tambaram, Chennai 600048</a></option>
+                                    <option value="AUFEAT"><a href="#">Annamalai University Faculty of Engineering and Technology,Annamalai nagar,Cuddalore</a></option>
+                                    <option value="SIT"><a href="#">Sethu Institute of Technology (Autonomous), Kariapatti Post, Virudhunagar District 626106</a></option>
+                                    <option value="RCET"><a href="#">Rohini College of Engineering & Technology, Anjugramam-Kanyakumari Main Road, Palkulam, Variyoor Post, Kanyakumari District 629401</a></option>
+                                    <option value="KSRCET"><a href="#">K S R College of Engineering (Autonomous), Tiruchengode, Namakkal District 637215</a></option>
+                                    <option value="VCEW"><a href="#">Vivekanandha College of Engineering for Women (Autonomous), Sathinaickenpalayam, Elayampalayam Village, Kumaramangalam, Namakkal District 637205</a></option>
+                                    <option value="SNSCE"><a href="#">S N S College of Engineering (Autonomous), Sathy Main Road, Kurumbapalayam Post, Coimbatore District 641107</a></option>
+                                    <option value="KRCT"><a href="#">K Ramakrishnan College of Technology (Autonomous), Kariyamanickam Road, Samayapuram, Manachanallur Taluk, Tiruchirappalli District 621112</a></option>
+                                    <option value="UCEP"><a href="#">University College of Engineering, Panruti, Chennai- Kumbakonam Highway, Panikkankuppam, Panruti, Cuddalore District 607106</a></option>
+                                    <option value="UCEP"><a href="#">University College of Engineering, Pattukkottai, ECR Road, Rajamadam, Pattukkottai Taluk, Thanjavur District 614701</a></option>
+                                    <option value="SJCE"><a href="#">St. Joseph College of Engineering, Trinity Campus, Nemili, Sriperumpudur Taluk, Kancheepuram District 602105</a></option>
+                                    <option value="LIT"><a href="#">Loyola Institute of Technology, Mevaloorkuppam, B Village, Palanchoor, Nazarethpet Post, Chennai 600123</a></option>
+                                    <option value="EPMCE"><a href="#">Er. Perumal Manimekalai College of Engineering, Near Koneripalli, Hosur, Krishnagiri District 635117</a></option>
+                                    <option value="PEC"><a href="#">Prathyusha Engineering college, Aranvoyalkuppam, Thiruvallur District 602025</a></option>
+                                    <option value="AVSEC"><a href="#">A V S Engineering College, Military Road, Ammapet, Salem District 636003</a></option>
+                                    <option value="PCET"><a href="#">Park College of Engineering and Technology, Kaniyur, Coimbatore District 641659</a></option>
+                                    <option value="JCE"><a href="#">Jerusalem College of Engineering (Autonomous), Narayanapuram, Pallikaranai, Chennai 600 100</a></option>
+                                    <option value="MCE"><a href="#">Meenakshi College of Engineering, Vembuliamman Koil Street, K K Nagar (West), Chennai 600078</a></option>
+                                    <option value="PEC"><a href="#">Paavai Engineering College (Autonomous) , NH-7, Pachal Post, Namakkal District 637018</a></option>
+                                    <option value="DGCT"><a href="#">Dhirajlal Gandhi College of Technology, Sikkanampatty, (Opp. to Airport), Omalur Taluk, Salem District 636309</a></option>
+                                    <option value="TJIT"><a href="#">T.J INSTITUTE OF TECHNOLOGY, KARAPAKKAM CH- 97</a></option>
+                                    <option value="ESEC"><a href="#">Erode Sengunthar Engineering College (Autonomous), Thudupathi Post, Erode District 638057</a></option>
+                                    <option value="ACT"><a href="#">Agni College of Technology, Old Mahabalipuram Road (OMR), Thalambur Village, Chengalpattu District 603103</a></option>
+                                    <option value="KSRIT"><a href="#">K S R Institute for Engineering and Technology, Thokkavadi, Namakkal District 637215</a></option>
+                                    <option value="AAA"><a href="#">AAA College of Engineering and Technology, Kamarajar Educational Road, Amathur Village, Sivakasi, Virudhunagar District 626005</a></option>
+                                    <option value="DSACE"><a href="#">Dr. Sivanthi Aditanar College of Engineering, Tiruchendur, Thoothukudi District 628215</a></option>
+                                    <option value="GRTIET"><a href="#">GRT Institute of Engineering and Technology, GRT Mahalakshmi Nagar, Chennai-Tirupathi Highway, Tiruttani Taluk, Thiruvallur District 631209</a></option>
+                                    <option value="PCE"><a href="#">Ponjesly College of Engineering, Vettornimadam Post, Nagercoil, Kanyakumari District 629003</a></option>
+                                    <option value="NSCET"><a href="#">Nadar Saraswathi College of Engineering and Technology, Vadupudupatti, Annanji Post, Theni District 625531</a></option>
+                                    <option value="UCEA"><a href="#">University College of Engineering, Ariyalur, Kathankudikadu Village, Thelur Post, Ariyalur District 621704</a></option>
+                                    <option value="NPRCET"><a href="#">N P R College of Engineering and Technology, Natham, Dindigul District 624003</a></option>
+                                    <option value="JIT"><a href="#">Jansons Institute of Technology, Karumathampatty, Somaur, Coimbatore District 641659</a></option>
+                                    <option value="MEC"><a href="#">Muthayammal Engineering College (Autonomous), Rasipuram, Namakkal District 637408</a></option>
+                                    <option value="AUFEAT2"><a href="#">ANNAMALAI UNIVERSITY - FACULTY OF ENGINEERING AND TECHNOLOGY,ANNAMALAI UNIVERSITY,CUDDALORE DIST, PIN - 608002.</a></option>
+                                    <option value="VVCET"><a href="#">V V College of Engineering, Arasoor Village, Idaichivilai Post, Santhakulam Taluk, Thoothukudi District 628656</a></option>
+                                    <option value="PSVCET"><a href="#">P S V College of Engineeering and Technology, Mittapalli, Balinayanapalli Post, Elathagiri, Krishnagiri District 635108</a></option>
+                                    <option value="SAEC"><a href="#">Syed Ammal Engineering College, Achuthan Vayal Post, Ramanathapuram District 623502</a></option>
+                                    <option value="SSCET"><a href="#">Sri Shanmugha College of Engineering and Technology, Morur Bit II Village, Salem District 637302</a></option>
+                                    <option value="DCE"><a href="#">Dhanalakshmi College of Engineering, Manimangalam, Chennai 601301</a></option>
+                                    <option value="KCE"><a href="#">Kings College of Engineering, Punalkulam, Pudukkottai District 613303</a></option>
+                                    <option value="MSAJCE"><a href="#">Mohamed Sathak A J College of Engineering, Old Mahabalipuram Road (OMR), Egattur, Chengalpattu District 603103</a></option>
+                                    <option value="ACEW"><a href="#">Arunachala College of Engineering for Women, Thanka Gardens, Manavilai, Vellichanthai, Nagercoil, Kanyakumari District 629203</a></option>
+                                    <option value="VCE"><a href="#">Vaigai College of Engineering, Therkutheru, Melur Taluk, Madurai District 625122</a></option>
+                                    <option value="HIT"><a href="#">Hindustan Institute of Technology (Autonomous), Othakkalmandapam, Coimbatore District 641032</a></option>
+                                    <option value="PSREC"><a href="#">P S R Engineering College (Autonomous), Appayanaickenpatti, Sevalpatti, Virudhunagar District 626140</a></option>
+                                    <option value="NIET"><a href="#">Nehru Institute of Engineering and Technology, Thirumalayampalayam Post, Coimbatore District 641105</a></option>
+                                    <option value="DSEC"><a href="#">Dhanalakshmi Srinivasan Engineering College (Autonomous), Thuraiyur Road, Perambalur District 621212</a></option>
+                                    <option value="KEC"><a href="#">Kingston Engineering College, Chithoor Main Road, Christianpet Village, Katpadi Taluk, Vellore District 632059</a></option>
+                                    <option value="AEC"><a href="#">Arunai Engineering College, Mathur, Thiruvannamalai District 606603</a></option>
+                                    <option value="PITS"><a href="#">Parisutham Institute of Technology and Science, Ring Road, Nanjikottai, Thanjavur District 613006</a></option>
+                                    <option value="SVCET"><a href="#">Sri Venkateswara College of Engineering and Technology, Thirupachur, Thiruvallur District 631203</a></option>
+                                    <option value="MZCET"><a href="#">Mount Zion College of Engineering and Technology, Pilivalam Post, Pudukkottai District 622507</a></option>
+                                    <option value="JSEC"><a href="#">Jai Shriram Engineering College, Dharapuram Road, Avinashi Palayam, Tiruppur District 638660</a></option>
+                                    <option value="KCE2"><a href="#">Kathir College of Engineering, Neelambur, Avinashi Road, Coimbatore District 641062</a></option>
+                                    <option value="SSEC"><a href="#">Sree Sakthi Engineering College, Bettathapuram, Bilichi Village, Karamadai, Coimbatore District 641104</a></option>
+                                    <option value="IFETC"><a href="#">I F E T College of Engineering (Autonomous), Gangarampalayam, Villupuram District 605108</a></option>
+                                    <option value="MCE2"><a href="#">Muthayammal College of Engineering, Kakkaveri Post, Namakkal District 637408</a></option>
+                                    <option value="CAHCET"><a href="#">C Abdul Hakeem College of Engineering and Technology, Melvisharam, Ranipet District 632509</a></option>
+                                    <option value="AIHT"><a href="#">Anand Institute of Higher Technology, Old Mahabalipuram Road (OMR), Kazhipattur, Chengalpattu District 603103</a></option>
+                                    <option value="AVSCT"><a href="#">AVS College of Technology, Attur Main Road, Near AVS College of Arts & Science, Chinnagoundapuram, Salem District 636106</a></option>
+                                    <option value="AMSCET"><a href="#">Aalim Muhammed Salegh College of Engineering, Muthapudupet, Avadi IAF, Chennai 600055</a></option>
+                                    <option value="CCET"><a href="#">Chettinad College of Engineering and Technology, NH- 67, Trichy Main Road, Puliyur C F, Karur District 639114</a></option>
+                                    <option value="VCTW"><a href="#">Vivekanandha College of Technology for Women, Sathinaickenpalayam, Elayampalayam Village, Kumaramangalam, Namakkal District 637205</a></option>
+                                    <option value="ACET"><a href="#">Akshaya College of Engineering and Technology, Kinathukadavu, Coimbatore District 642109</a></option>
+                                    <option value="MEC2"><a href="#">Mahendra Engineering College (Autonomous), Mahendhirapuri, Mallasamudram, Namakkal District 637503</a></option>
+                                    <option value="BEC"><a href="#">Builders engineering college, Nathakadaiyur, Erode Road, Palayakottai Village, Kangeyam, Tiruppur District 638108</a></option>
+                                    <option value="EEC"><a href="#">Excel Engineering College (Autonomous), NH-544, Salem Main Road, Pallakapalayam, Sankari West Post, Komarapalayam Taluk, Namakkal District - 637303</a></option>
+                                    <option value="UCER"><a href="#">University College of Engineering, Ramanathapuram, Pullangudi, Ramanathapuram District 623513</a></option>
+                                    <option value="NCET"><a href="#">Nandha College of Technology, Pitchandampalayam Post, Erode District 638052</a></option>
+                                    <option value="BIEW"><a href="#">Bharathiyar Institute of Engineering for Women, Deviayakurichi, Attur Taluk, Salem District 636112</a></option>
+                                    <option value="SMCE"><a href="#">Stella Marys College of Engineering, Arunthengan Vilai, Azhikal Post, Kanyakumari District 629202</a></option>
+                                    <option value="SMTEC"><a href="#">St. Mother Theresa Engineering College, Vagaikulam, Thoothukudi District 628102</a></option>
+                                    <option value="JPEC"><a href="#">J P College of Engineering, College Road, Ayakudy, Tenkasi Taluk, Tenkasi District 627852</a></option>
+                                    <option value="UCET2"><a href="#">University College of Engineering, Thirukkuvalai, Nagappattinam District 610204</a></option>
+                                    <option value="GCT2"><a href="#">Gnanamani College of Technology, Pachal Post, Namakkal District 637018</a></option>
+                                    <option value="MAMCET"><a href="#">M.A.M. College of Engineering and Technology, Trichy- Chennai Trunk Road, Siruganur, Tiruchirappalli District 621105</a></option>
+                                    <option value="SCE"><a href="#">Suguna College of Engineering, Kalappatti Road, Civil Aerodrome Post, Coimbatore District 641014</a></option>
+                                    <option value="PIET"><a href="#">Pollachi Institute of Engineering and Technology, Main Road, Poosaripatti, Pollachi Taluk, Coimbatore District 642205</a></option>
+                                    <option value="SRIET"><a href="#">Sri Ranganathar Institute of Engineering and Technology, Thudialur-Kovilpalay Road, Coimbatore District 641110</a></option>
+                                    <option value="MIET"><a href="#">M I E T Engineering College, Trichy-Pudukkottai Road, Tiruchirappalli District 620007</a></option>
+                                    <option value="SVHTEC"><a href="#">Shree Venkateshwara Hi-Tech Engineering College, Othakuthirai, K Mettupalayam Post, Gobichettipalayam, Erode District 638455</a></option>
+                                    <option value="AEC2"><a href="#">Apollo Engineering College, Mevaloorkuppam, Valarpuram Post, Sriperumpudur, Kancheepuram District 602105</a></option>
+                                    <option value="JACSI"><a href="#">Jayaraj Annapackiam CSI College of Engineering, Nazareth, Thoothukudi District 628617</a></option>
+                                    <option value="RVCE"><a href="#">Renganayagi Varatharaj College of Engineering, Salvarpatti, Sivakasi, Virudhunagar District 626128</a></option>
+                                    <option value="SVCET"><a href="#">Sri Vidhya College of Engineering and Technology, Sivakasi Main Road, P Kumaralinapuram, Virudhunagar District 626005</a></option>
+                                    <option value="DGUPCE"><a href="#">Dr. G U Pope College of Engineering, Sawyerpuram, Thoothukudi District 628251</a></option>
+                                    <option value="MCE"><a href="#">Mookambigai College of Engineering, Keeranur, Pudukkottai District 622502</a></option>
+                                    <option value="AEC2"><a href="#">Adhiparasakthi Engineering College, Melmaruvathur, Chengalpattu District 603319</a></option>
+                                    <option value="RVSCET"><a href="#">R V S College of Engineering and Technology, Kannampalayam, Sulur, Coimbatore District 641402</a></option>
+                                    <option value="EGSPEC"><a href="#">E G S Pillay Engineering College (Autonomous), Nagapattinam District 611002</a></option>
+                                    <option value="MPNMJEC"><a href="#">M P Nachimuthu M Jagannathan Engineering College, Chennimalai, Erode District 638112</a></option>
+                                    <option value="JJCET"><a href="#">J J College of Engineering and Technology, Poolankulathupatti Post, Thiruchirappalli District 620009</a></option>
+                                    <option value="APCE"><a href="#">Adhiparasakthi College of Engineering, Kalavai, Ranipet District 632506</a></option>
+                                    <option value="SSCE"><a href="#">Sree Sowdambiga College of Engineering, Aruppukkottai Taluk, Virudhunagar District 626134</a></option>
+                                    <option value="DMIEC"><a href="#">D M I Engineering College, Aralvaimozhi Village, Thovalai, Kanyakumari District 629301</a></option>
+                                    <option value="DACE"><a href="#">Dhaanish Ahmed College of Engineering, Padappai, Chennai 601301</a></option>
+                                    <option value="NPSBCET"><a href="#">New Prince Shri Bhavani College of Engineering and Technology, Vengaivasal Main Road, Gowriwakkam, Chennai 600073</a></option>
+                                    <option value="DMICE"><a href="#">D M I College of Engineering, Palanchoor, Nazrethpet, Chennai 602103</a></option>
+                                    <option value="PSYEC"><a href="#">Pandian Saraswathi Yadav Engineering College, Thirumansolai Post, Sivagangai District 630 561</a></option>
+                                    <option value="ACET2"><a href="#">AMRITA College of Engineering and Technology, Erachakulam Post, Kanyakumari District 629902</a></option>
+                                    <option value="CKCET"><a href="#">C K College of Engineering and Technology, Chellangkuppam, Cuddalore District 607003</a></option>
+                                    <option value="JNNIE"><a href="#">J N N Institute of Engineering, Ushaa Garden, Kannigaipair Village, Uthukottai Taluk, Thiruvallur District 601102</a></option>
+                                    <option value="MECET"><a href="#">MAR Ephraem College of Engineering & Technology, Malankara Hills, Elavuvillai, Marthandam, Kanyakumari District 629171</a></option>
+                                    <option value="MASOE"><a href="#">M.A.M. School of Engineering, Siruganur, Tiruchirappalli District 621105</a></option>
+                                    <option value="RTC"><a href="#">Rathinam Technical Campus, Pollachi Road, Eachanari, Coimbatore District 641021</a></option>
+                                    <option value="BIE"><a href="#">Bethlahem Institute of Engineering, Karungal, Kanyakumari District 629157</a></option>
+                                    <option value="SACSM"><a href="#">SACS-M A V M M Engineering College, Kidaripatty Post, Madurai District 625001</a></option>
+                                    <option value="NSNCET"><a href="#">N S N College of Engineering and Technology, Karur- Madurai NH7, Manalmedu, Karur District 639003</a></option>
+                                    <option value="PETEC"><a href="#">PET Engineering College, Vallioor Post, Tirunelveli District 627117</a></option>
+                                    <option value="PDVKCET"><a href="#">Prince Dr. K Vasudevan College of Engineering and Technology, Medavakkam-Mambakkam Road, Ponmar, Chennai 600048</a></option>
+                                    <option value="SCT"><a href="#">Selvam College of Technology, Pappanaickenpatti Post, Namakkal District 637003</a></option>
+                                    <option value="TCE2"><a href="#">Tamilnadu College of Engineering, Karumathampatti Post, Coimbatore District 641659</a></option>
+                                    <option value="SBMCET"><a href="#">SBM College of Engineering and Technology, Thamaraipady, T N Paraipatti Pirivu, Dindigul District 624005</a></option>
+                                    <option value="GCE"><a href="#">Grace College of Engineering, Chandy Nagar, Mullakkadu, Thoothukudi District 628005</a></option>
+                                    <option value="CTKEC"><a href="#">Christ the King Engineering College, Cecilia Gardens, Chikkarampalayam Village, Coimbatore District 641104</a></option>
+                                    <option value="ECE"><a href="#">Einstein College of Engineering, Seethaparpanallur, Tirunelveli District 627012</a></option>
+                                    <option value="TJSEC"><a href="#">T J S Engineering College, Peruvoyal, Near Kavaraipettai, Gummidipoondi Taluk, Thiruvallur District 601206</a></option>
+                                    <option value="TKSCOT"><a href="#">Theni Kammavar Sangam College of Technology, Theni Main Road, Koduvillarpatti Post, Theni District 625534</a></option>
+                                    <option value="TEC"><a href="#">Tagore Engineering College, Rathnamangalam, Vandalur Post, Chennai 600048</a></option>
+                                    <option value="SSIET"><a href="#">Sree Sastha Institute of Engineering and Technology, Chembarambakkam, Chennai 600103</a></option>
+                                    <option value="VRSCET"><a href="#">V R S College of Engineering and Technology, Arasur, Villupuram District 607107</a></option>
+                                    <option value="RGCE"><a href="#">Rajiv Gandhi College of Engineering, Nemili, Sriperumpudur Taluk, Kancheepuram District 602105</a></option>
+                                    <option value="MRKIT"><a href="#">M R K Institute of Technology, Nattarmangalam Village, Kattumannarkoil, Cuddalore District 608306</a></option>
+                                    <option value="IECW"><a href="#">Idhaya Engineering College for Women, Chinnasalem, Kallakkurichi District 606201</a></option>
+                                    <option value="GIET"><a href="#">Global Institute of Engineering and Technology, Bangalore-Chennai Highway, Melvisharam, Walajah Taluk, Ranipet District 632506</a></option>
+                                    <option value="SRRCET"><a href="#">Sree Raaja Raajan College of Engineering & Technology, Amaravathi Village, Amaravathi Pudur Post, Karaikudi, Sivagangai District 630301</a></option>
+                                    <option value="SEC"><a href="#">Shanmuganathan Engineering College, Pillivalam Post, Pudukkottai District 622507</a></option>
+                                    <option value="UIT"><a href="#">United Institute of Technology, Gadalore Village, Perianaickenpalayam, Coimbatore District 641020</a></option>
+                                    <option value="VVIOT"><a href="#">Varuvan Vadivelan Institute of Technology, Nallanahalli, Dharmapuri District 636701</a></option>
+                                    <option value="FMET"><a href="#">Fatima Michael College of Engineering & Technology, Sengottai Village, Sivagangai Main Road, Madurai District 625020</a></option>
+                                    <option value="KCET"><a href="#">Krishnaswamy Collge of Engineering and Technology, S Kumarapuram, Cuddalore District 607109</a></option>
+                                    <option value="LITS"><a href="#">Loyola Institute of Technology and Science, Loyola Nagar, P B No.2, Thovalai, Kanyakumari District 629302</a></option>
+                                    <option value="CSICE"><a href="#">C S I College of Engineering, Ketti, The Nilgiris 643215</a></option>
+                                    <option value="MCE2"><a href="#">Mangayarkarasi College of Engineering, First Street, Mangayarkarasi Nagar, Paravai, Madurai District 625402</a></option>
+                                    <option value="MSEC"><a href="#">Mohamed Sathak Engineering College, Kilakarai, Ramanathapuram District 623806</a></option>
+                                    <option value="PTLCCET"><a href="#">P T Lee Chengalvaraya Naicker College of Engineering and Technology, Oovery, Veliyur Post, Kancheepuram District 631 502</a></option>
+                                    <option value="CARECET"><a href="#">CARE College of Engineering (Formerly C.A.R.E Group of Institutions), Thayanoor Village, Thayanoor Village, Kuttappatti, Srirangam Taluk, Tiruchirappalli District 620009</a></option>
+                                    <option value="MEC2"><a href="#">Mailam Engineering College, Mailam, Villupuram District 604304</a></option>
+                                    <option value="PCE"><a href="#">Park College of Engineering, Prema Ravi Nagar, Karumathampatti, Coimbatore - 641 659</a></option>
+                                    <option value="PCE2"><a href="#">Paavai College of Engineering, NH-7, Pachal Post, Namakkal District 637018</a></option>
+                                    <option value="KCEAT"><a href="#">Karpagavinayaga College of Engineering and Technology, Palayanoor Post, Maduranthagam Taluk, Chengalpattu District 603308</a></option>
+                                    <option value="NIT"><a href="#">Nehru Institute of Technology, Thirumalayampalayam Post, Coimbatore District 641105</a></option>
+                                    <option value="REC"><a href="#">Roever Engineering College, Elambalur, Perambalur District 621212</a></option>
+                                    <option value="AIT"><a href="#">Adithya Institute of Technology, Kurumbapalayam Village, Coimbatore District 641107</a></option>
+                                    <option value="GTJEC"><a href="#">Ganadipathy Tulsi’s Jain Engineering College, Kaniyambadi, Vellore District 632102</a></option>
+                                    <option value="IGCE"><a href="#">Indra Ganesan College of Engineering, Madurai Main Road, Manikandam, Tiruchirappalli District 620012</a></option>
+                                    <option value="DSCT"><a href="#">Dhanalakshmi Srinivasan College of Engineering and Technology, East Coast Road, Poonjeri, Chennai 603104</a></option>
+                                    <option value="SPCET"><a href="#">St. Peters College of Engineering and Technology, College Road, Avadi, Chennai 600 054</a></option>
+                                    <option value="MIT2"><a href="#">Mahendra Institute of Technology (Autonomous), Mahendhirapuri, Mallasamudram, Namakkal District 637503</a></option>
+                                    <option value="NSIT"><a href="#">Narasus Sarathy Institute of Technology, Poosaripatty Village, Omalur Taluk, Salem District 636305</a></option>
+                                    <option value="CCET"><a href="#">Christian College of Engineering and Technology, Oddanchatram, Dindigul District 624619</a></option>
+                                    <option value="PPGIT"><a href="#">P P G Institute of Technology, Vilankurichi Village, Coimbatore District 641035</a></option>
+                                    <option value="KSCKET"><a href="#">K S K College of Engineering and Technology, Thanjavur Main Road, Darasuram, Kumbakonam, Thanjavur District 612702</a></option>
+                                    <option value="SEC2"><a href="#">Sengunthar Engineering College (Autonomous), Tiruchengode, Namakkal District 637205</a></option>
+                                    <option value="CIT"><a href="#">CAPE Institute of Technology, Levingipuram, Tirunelveli District 627114</a></option>
+                                    <option value="MCE"><a href="#">Marthandam College of Engineering & Technology, Kuttakuzhi, Veeyanoor Post, Kanyakumari District 629177</a></option>
+                                    <option value="SCE"><a href="#">Sudharsan Engineering College, Sathiyamangalam Post, Pudukkottai District 622501</a></option>
+                                    <option value="AEC"><a href="#">Arasu Engineering College, Chennai Main Road, Kumbakonam, Thanjavur District 612501</a></option>
+                                    <option value="JCEAT"><a href="#">Jayam College of Engineering and Technology, Nallanur Post, Dharmapuri District 636813</a></option>
+                                    <option value="PCT"><a href="#">Paavai College of Technology, NH-7, Pachal Post, Namakkal District 637018</a></option>
+                                    <option value="SEC3"><a href="#">Shivani Engineering College, Trichy-Dindigul NH Road, Poolangulathupatti, Tiruchirappalli - 620009</a></option>
+                                    <option value="USE"><a href="#">Udaya School of Engineering, Ammandivilai Post, Kanyakumari District 629204</a></option>
+                                    <option value="AIT2"><a href="#">Arifa Institute of Technology (Formerly Haji sheik Ismail Engineering College), Esanoor, Keelaiyur Post, Thirukkuvalai Taluk, Nagapattinam District 611103</a></option>
+                                    <option value="DAIT"><a href="#">Dhaanish Ahmed Institute of Technology, Pichanur Post, (Near K G Chavadi), Coimbatore District 641105</a></option>
+                                    <option value="PBET"><a href="#">Pavendhar Bharathidasan College of Engineering and Technology, Pudukkottai Main Road, Tiruchirappalli District 620024</a></option>
+                                    <option value="KEC2"><a href="#">Kings Engineering College, Sriperumpudur Taluk, Kancheepuram District 602105</a></option>
+                                    <option value="MBCT"><a href="#">Mahakavi Bharathiyar College of Engineering and Technology, Vasudevanallur, Tenkasi District 627758</a></option>
+                                    <option value="SGI"><a href="#">Surya Group of Institutions, GST Road, Vikravandi Village, Villupuram District 605652</a></option>
+                                    <option value="SINCE"><a href="#">Sir Issac Newton College of Engineering and Technology, Anthanapeetai Post, Papakoil, Nagappattinam District 611102</a></option>
+                                    <option value="SRCE"><a href="#">Sri Ramakrishna College of Engineering, Sri Saradha Nagar, NH-45, Perambalur District 621113</a></option>
+                                    <option value="UCET"><a href="#">Universal College of Engineering and Technology, Anbagam Campus, Radhapuram Road, Vallioor, Tirunelveli District 627117</a></option>
+                                    <option value="SCET"><a href="#">SCAD College of Engineering and Technology, Cheranmahadevi, Tirunelveli District 627414</a></option>
+                                    <option value="TIEAT"><a href="#">Tagore Institute of Engineering and Technology, Deviyakurichi, Attur Taluk, Salem District 636112</a></option>
+                                    <option value="PEC"><a href="#">Priyadarshini Engineering College, Vaniyambadi Post, Thiruppattur District 635751</a></option>
+                                    <option value="MCE2"><a href="#">Mahendra College of Engineering, Attur Road, Minnampalli, Valapady, Salem District 636106</a></option>
+                                    <option value="JKKMCOT"><a href="#">J K K Muniraja College of Technology, T N Palayam, Gobi Taluk, Erode District 638506</a></option>
+                                    <option value="BEC"><a href="#">Bharathidasan Engineering College, Nattrampalli Post, Thiruppathur District 635854</a></option>
+                                    <option value="SMIT"><a href="#">Sri Muthukumaran Institute of Technology, Near Mangadu, Chennai 600069</a></option>
+                                    <option value="HCEC"><a href="#">Holy Cross Engineering College, Vagaikulam, Sri Mulakarai, Srivaikuntam, Thoothukudi District 628851</a></option>
+                                    <option value="INFOIE"><a href="#">INFO Institute of Engineering, Sarkar Samakulam, Coimbatore District 641107</a></option>
+                                    <option value="UCET2"><a href="#">Ultra College of Engineering and Technology, Kodikulam, 1 Bit Village, Madurai-Chennai Highway, Madurai District 625104</a></option>
+                                    <option value="PTRCET"><a href="#">P T R College of Engineering and Technology, Austinpatty Post, Madurai District 625008</a></option>
+                                    <option value="MAMEC"><a href="#">M.A.M. College of Engineering, Siruganur, Tiruchirappalli District 621105</a></option>
+                                    <option value="MEC"><a href="#">MAHALAKSHMI ENGINEERING COLLEGE,TRICHY- SALEM HIGHWAY,NEAR NO.1 TOLLGATE,,TIRUCHIRAPALLI DIST, PIN - 621213</a></option>
+                                    <option value="SBECW"><a href="#">Sri Bharathi Engineering College for Women, Kaikkuruchi Village, Alangudi Taluk, Pudukkottai District 622303</a></option>
+                                    <option value="TEC"><a href="#">Thamirabharani Engineering College, Chathirampudukulam Village, Thatchanallur, Tirunelveli District 625358</a></option>
+                                    <option value="PSNEC"><a href="#">P S N Engineering College, Melathediyoor, Tirunelveli District 627152</a></option>
+                                    <option value="AAEC"><a href="#">Al-Ameen Engineering College (Autonomous), Karundevan Palayam, Nanjai Uthukuli Post, Erode District 638104</a></option>
+                                    <option value="CMSCET"><a href="#">C M S College of Engineering and Technology, Appachigoundenpathy, Kumittipathi Post, Coimbatore District 641032</a></option>
+                                    <option value="SREC"><a href="#">Sri Ram Engineering College, Perumalpattu, Veppampattu (R S), Thiruvallur District 602 024</a></option>
+                                    <option value="AVEC"><a href="#">Annai Vailankanni College of Engineering, Pothaiyadi Salai, Pottalkulam, Azhagappapuram, Kanyakumari District 629401</a></option>
+                                    <option value="AREC"><a href="#">A R Engineering College, Vadakuchipalayam, Kappiyampuliyur Post, Villupuram District 605601</a></option>
+                                    <option value="MEC2"><a href="#">Madha Engineering College, Kundrathur, Chennai 600069</a></option>
+                                    <option value="PSNCETS"><a href="#">PSN College of Engineering and Technology and Science,Melathediyoor, Tirunelveli-627 152</a></option>
+                                    <option value="RVSTC"><a href="#">R V S Technical Campus-Coimbatore, Kumaran Kottam Campus, Kannampalayam, Sulur, Coimbatore District 641 402</a></option>
+                                    <option value="SRCE2"><a href="#">Sardar Raja College of Engineering, Alangulam, Tenkasi District 627808</a></option>
+                                    <option value="AEC2"><a href="#">Annaporna Engineering College, Sankari Main Road, NH-47, Periaseeragapadi, Salem District 636308</a></option>
+                                    <option value="SKREC"><a href="#">S.K.R. ENGINEERING COLLEGE,NAZARATHPET, POONAMALLEE TALUK,THIRUVALLUR DIST, PIN - 600123</a></option>
+                                    <option value="VCCE"><a href="#">Vins Christian College of Engineering, Chunkankadai Post, Nagercoil, Kanyakumari District 629807</a></option>
+                                    <option value="SJCEAT"><a href="#">St. Josephs College of Engineering and Technology, Elupatti Village, Rawaspatti Post, Thanjavur District 613403</a></option>
+                                    <option value="JKKNCET"><a href="#">J K K Nataraja College of Engineering and Technology, Komarapalayam Amani, Thattankuttai Panchayat, Namakkal District 638183</a></option>
+                                    <option value="RVSCOE"><a href="#">R V S College of Engineering, N Paraipatti Post, Dindigul District 624005</a></option>
+                                    <option value="SEC"><a href="#">Surya Engineering College, Mettukadai, Kathirampatti Post, Erode District 638107</a></option>
+                                    <option value="SCET"><a href="#">Salem College of Engineering and Technology, Salem- Attur Main Road, NH-68, Mettupatty Perumapalayam, Salem District 636111</a></option>
+                                    <option value="BNEC"><a href="#">Bharath Niketan Engineering College, Thimmarasanaickanoor, Aundipatti, Theni District 625536</a></option>
+                                    <option value="PSNITS"><a href="#">PSN Institute of Technology and Science,Melathediyoor, Tirunelveli-627 152</a></option>
+                                    <option value="SSMCE"><a href="#">S S M College of Engineering, Komarapalayam, Namakkal District 638183</a></option>
+                                    <option value="JEC"><a href="#">Jaya Engineering College, Thirunindravur, Chennai 602024</a></option>
+                                    <option value="OIT"><a href="#">OASYS Institute of Technology , Pulivalam Village, Musiri Taluk, Tiruchirappalli District 626001</a></option>
+                                    <option value="GSBT"><a href="#">Gojan School of Business and Technology, Alamathi, Chennai 600062</a></option>
+                                    <option value="ACET"><a href="#">Asian College of Engineering and Technology, Asian College Road, Kondayampalayam, Near Saravanampatti, Coimbatore District 641110</a></option>
+                                    <option value="SKPEC"><a href="#">S K P Engineering College, Thiruvannamalai District 606611</a></option>
+                                    <option value="SACET"><a href="#">St. Annes College of Engineering and Technology, Anguchettypalayam, Siruvathur Post, Panruti, Cuddalore District 607110</a></option>
+                                    <option value="SMCET"><a href="#">St. Michael College of Engineering and Technology, Kalayarkoil, Sivagangai District 630551</a></option>
+                                    <option value="MTCEAT"><a href="#">Mother Terasa College of Engineering and Technology, Mettusalai Post and Taluk, Pudukkottai District 622102</a></option>
+                                    <option value="SVCCET"><a href="#">S Veerasamy Chettiar College of Engineering and Technology, Puliangudi Post, Tenkasi District 627855</a></option>
+                                    <option value="RVSETI"><a href="#">R V S Educational Trust’s Groups of Institutions (Integrated Campus), N Paraipatti Post, Vedasandur Taluk, Dindigul District 624005</a></option>
+                                    <option value="TEC2"><a href="#">Thangavelu Engineering College, Karappakkam, Chennai 600097</a></option>
+                                    <option value="SCET2"><a href="#">Sasurie College of Engineering, Vijayamangalam, Tiruppur District 638056</a></option>
+                                    <option value="ECET"><a href="#">EASA College of Engineering and Technology, NH-47, Coimbatore-Palakkad Main Road, Navakarai Post, Coimbatore District 641105</a></option>
+                                    <option value="JSEC"><a href="#">Jaya Sakthi Engineering College, Thirunindravur, Chennai 602024</a></option>
+                                    <option value="ACE"><a href="#">Alpha College of Engineering, No.34, Udayavar Koil Street, Poonamallee, Thirumazhisai, Chennai - 600124</a></option>
+                                    <option value="SRGEC"><a href="#">SRG Engineering College, Aniyapuram Post, Namakkal District 637017</a></option>
+                                    <option value="LJCET"><a href="#">Lord Jegannath College of Engineering and Technology, Kumarapuram, Thoppur Post, Kanyakumari District 629402</a></option>
+                                    <option value="GKMCET"><a href="#">G K M College of Engineering and Technology, Alappakkam-Mappedu Road, Chennai 600063</a></option>
+                                    <option value="ACET2"><a href="#">Annai College of Engineering and Technology, Kovilacheri, Kumbakonam, Thanjavur District 612503</a></option>
+                                    <option value="MBEC"><a href="#">Maha Bharathi Engineering College, A Vasudevanur, Chinnasalem, Kallakurichi District 606201</a></option>
+                                    <option value="SMKFIOT"><a href="#">Shree Motilal Kanhaiyalal (SMK)Fomra Institute of Technology, Old Mahabalipuram Road (OMR), Kelambakkam, Chengalpattu District 603103</a></option>
+                                    <option value="AKTMCEAT"><a href="#">A K T Memorial College of Engineering and Technology, Neelamangalam Village, Kallakurichi District 606202</a></option>
+                                    <option value="PREC"><a href="#">P R Engineering College, Vallam, Thanjavur District 613403</a></option>
+                                    <option value="TEC3"><a href="#">Trichy Engineering College, Konalai, Tiruchirappalli District 621132</a></option>
+                                    <option value="JCET"><a href="#">J C T College of Engineering and Technology, Pichanur, Coimbatore District 641105</a></option>
+                                    <option value="MECW"><a href="#">Mahendra Engineering College for Women, Kumaramangalam, Namakkal District 637205</a></option>
+                                    <option value="AEC"><a href="#">Ariyalur Engineering College, NH-227, Trichy- Chithambaram NH, Karuppur-Senapathy Post, Ariyalur District 621707</a></option>
+                                    <option value="LMEC"><a href="#">Latha Mathavan Engineering College, Kidaripatti Post, Alagarkoil (Via), Melur Taluk, Madurai District 625301</a></option>
+                                    <option value="CSIIT"><a href="#">C S I Institute of Technology, Thovalai, Kanyakumari District 629302</a></option>
+                                    <option value="NCE"><a href="#">Nellai College of Engineering (Formerly National College of Engineering), Maruthakulam Post, Tirunelveli District 627151</a></option>
+                                    <option value="MIET"><a href="#">Madha Institute of Engineering and Technology, Erandamkattalai Village, Sadhananthapuram, Thandalam Post, Chennai 602101</a></option>
+                                    <option value="SSCET"><a href="#">Shree Sathyam College of Engineering and Technology, NH-47, Manjakkalpatti, Kuppanur Post, Sankari Taluk, Salem District 637301</a></option>
+                                    <option value="SEC2"><a href="#">Shreenivasa Engineering College, B Pallipatti, Bommidi, Pappireddipatti Taluk, Dharmapuri District 635301</a></option>
+                                    <option value="AVCE"><a href="#">Annai Veilankannis College of Engineering, Gandhi Road, Nedungundram, Chennai 600048</a></option>
+                                    <option value="KEC"><a href="#">The Kavery Engineering College, M Kalipatti Post, Mecheri, Salem District 634456</a></option>
+                                    <option value="PCET"><a href="#">Podhigai College of Engineering and Technology, Vinayakapuram, Adiyur Post, Tirupattur District 635601</a></option>
+                                    <option value="MIET2"><a href="#">Mahendra Institute of Engineering and Technology, Mahendrapuri, Mallasamudram, Namakkal District 637503</a></option>
+                                    <option value="SBCEC"><a href="#">Sri Balaji Chockalingam Engineering College, Arni, Thiruvannamalai District 632317</a></option>
+                                    <option value="NIT"><a href="#">Nelliandavar Institute of Technology, Nerunjikorai Village, Pudhupalayam, Ariyalur Taluk, Ariyalur District 621704</a></option>
+                                    <option value="RIT"><a href="#">Rajas Institute of Technology , Ozhuginasery, Nagercoil, Kanyakumari District 629001</a></option>
+                                    <option value="ATEC"><a href="#">Annai Terasa College of Engineering, Thirunavalur, Kallakkurichi District 607204</a></option>
+                                    <option value="ARJCET"><a href="#">A R J College of Engineering and Technology, Mannargudi Taluk, Thiruvarur District 614001</a></option>
+                                    <option value="SREC"><a href="#">Sri Ramanujar Engineering College, Vandalur, Kolappakkam, Chennai 600048</a></option>
+                                    <option value="CMSEC"><a href="#">C M S College of Engineering, Emapuram Post, Namakkal District 637003</a></option>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                
+                                
+                                
+                                
+                                </select></div>
+                        <div class="form mb-3">
+                            <input name="Premier/Non-Premier" type="radio" name="category" id="floatingInput" value="premier">
+                            <label for="floatingInput">Premier</label>
+                            <input name="Premier/Non-Premier" type="radio" name="category" id="floatingInput" value="non-premier">
+                            <label for="floatingInput">Non-Premier</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="Presented On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY" style="text-transform: uppercase;" required>
+                            <label for="floatingInput">Presented On</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input name="Topic Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
+                            <label for="floatingInput">Topic Name</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown" aria-label="Select prize/participation">
                                         <option value="1st">1st Prize</option>
                                         <option value="2nd">2nd Prize</option>
                                         <option value="3rd">3rd Prize</option>
                                         <option value="Participation">Participation</option>
                                     </select>
-                                    <label for="prizeParticipationDropdown">Prize/Participation</label>
-                                </div>
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
+                            <label for="prizeParticipationDropdown">Prize/Participation</label>
+                        </div>
+                        <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                        <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                        <div class="d-grid">
+                            <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
                                         SUBMIT
                                     </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
-                                    onclick="window.history.back();">CANCEL
+
+                            <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" onclick="window.history.back();">CANCEL
                                     </button>
-    
-                                </div>
-                            </form>
 
                         </div>
+                    </form>
 
-                    </div>
                 </div>
+
             </div>
-        
-        
-        <!--end of content area-->
-        <!--End of body content-->
-        <!--end main content area -->
+        </div>
+    </div>
 
 
-        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!--end of content area-->
+    <!--End of body content-->
+    <!--end main content area -->
 
-        <script src="../formHandlers.js"></script>
+
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script src="../formHandlers.js"></script>
 </body>
 
 </html>
