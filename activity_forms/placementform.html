@@ -26,32 +26,32 @@
                             <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
                                 class="text-center">Placement and Internship</h1>
     
-                            <form>
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <select name="Category" class="form-select" id="categoryDropdown" aria-label="Select category">
+                                            <option selected disabled>Select category</option>
+                                            <option value="clr">Written Test cleared</option>
+                                            <option value="placed">Placed</option>
+                                            <option value="intern">Placed with Internship</option>
+                                            <option value="placeout">Internship without Placement</option>
+                                        </select>
+                                        <label for="categoryDropdown">Category</label>
+                                    </div>
                                 
-                                <div class="form-floating mb-3">
-                                    <select name="Category" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                        <option selected disabled>Select category</option>
-                                        <option value="clr">Written Test cleared</option>
-                                        <option value="placed">Placed</option>
-                                        <option value="intern">Placed with Internship</option>
-                                        <option value="placeout">Internship without Placement</option>
-                                    </select>
-                                    <label for="presentationDropdown">Category</label>
-                                </div>
+                                    <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                                    <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                    <span id="invalid-input" class="text-danger"></span>
                                 
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
-                                        SUBMIT
-                                    </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
-                                    onclick="window.history.back();">CANCEL
-                                    </button>
-    
-                                </div>
-                            </form>
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);placementVal(event)">
+                                            SUBMIT
+                                        </button>
+                                
+                                        <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
+                                                onclick="window.history.back();">CANCEL
+                                        </button>
+                                    </div>
+                                </form>
     
                         </div>
     

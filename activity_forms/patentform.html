@@ -27,43 +27,42 @@
                                 class="text-center">Project to Paper /
                                 Patent / Copyright</h1>
     
-                            <form>
-                                <div class="form-floating mb-3">
-                                    <select name="Patent Type" class="form-select" id="presentationDropdown" aria-label="Select presentation">
-                                        <option selected disabled>Select patent type</option>
-                                        <option value="sci">SCI Indexed</option>
-                                        <option value="wos">WOS / Scopus Journal /
-                                            Conference</option>
-                                        <option value="other">Other Journal /
-                                            Conference</option>
-                                        <option value="patent">Patent</option>
-                                        <option value="copyright">Copyright</option>
-                                    </select>
-                                    <label for="presentationDropdown">Patent type</label>
-                                </div>
-                                <div class="form mb-3">
-                                    <input type="radio" name="category" id="floatingInput" value="submitted">
-                                    <label for="floatingInput">Submitted</label>
-                                    <input type="radio" name="category" id="floatingInput" value="published">
-                                    <label for="floatingInput">Published</label>
-                                    <input type="radio" name="category" id="floatingInput" value="obtained">
-                                    <label for="floatingInput">Obtained</label>
-                                </div>
+                                <form>
+                                    <div class="form-floating mb-3">
+                                        <select name="Patent Type" class="form-select" id="patentTypeDropdown" aria-label="Select patent type">
+                                            <option selected disabled>Select patent type</option>
+                                            <option value="sci">SCI Indexed</option>
+                                            <option value="wos">WOS / Scopus Journal / Conference</option>
+                                            <option value="other">Other Journal / Conference</option>
+                                            <option value="patent">Patent</option>
+                                            <option value="copyright">Copyright</option>
+                                        </select>
+                                        <label for="patentTypeDropdown">Patent type</label>
+                                    </div>
                                 
+                                    <div class="form mb-3">
+                                        <input type="radio" name="category" id="submittedRadio" value="submitted">
+                                        <label for="submittedRadio">Submitted</label>
+                                        <input type="radio" name="category" id="publishedRadio" value="published">
+                                        <label for="publishedRadio">Published</label>
+                                        <input type="radio" name="category" id="obtainedRadio" value="obtained">
+                                        <label for="obtainedRadio">Obtained</label>
+                                    </div>
                                 
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
-                                <div class="d-grid">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
-                                        SUBMIT
-                                    </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6" 
-                                    onclick="window.history.back();">CANCEL
-                                    </button>
-    
-                                </div>
-                            </form>
+                                    <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                                    <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                                    <span id="invalid-input" class="text-danger"></span>
+                                
+                                    <div class="d-grid">
+                                        <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);patentVal(event)">
+                                            SUBMIT
+                                        </button>
+                                
+                                        <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
+                                                onclick="window.history.back();">CANCEL
+                                        </button>
+                                    </div>
+                                </form>
     
                         </div>
     

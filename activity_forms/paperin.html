@@ -27,7 +27,7 @@
 
                         <form>
                             <div class="form-floating mb-3">
-                                <select name="Presented At" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+                                <select name="Presented At" class="form-select" id="presentedAtDropdown" aria-label="Select presentation">
                                     <option selected>Club/Association Name</option>
                                     <option value="IEEE Students Branch">IEEE Students Branch
                                     </option>
@@ -98,17 +98,17 @@
                                     <option value="Cloud Users Group">Cloud Users Group</option>
                                     <option value="IELTS Club">IELTS Club</option>
                                 </select>
-                                <label for="presentationDropdown">Presented at</label>
+                                <label for="presentedAtDropdown">Presented at</label>
                             </div>
 
                             <div class="form-floating mb-3">
-                                <input name="Presented On" type="date" class="form-control" id="floatingInput" placeholder="DD/MM/YYYY"
+                                <input name="Presented On" type="date" class="form-control" id="presentedOnInput" placeholder="DD/MM/YYYY"
                                     style="text-transform: uppercase;">
-                                <label for="floatingInput">Presented On</label>
+                                <label for="presentedOnInput">Presented On</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input name="Topic Name" type="text" class="form-control" id="floatingInput" placeholder="DD-MM-YYYY">
-                                <label for="floatingInput">Topic Name</label>
+                                <input name="Topic Name" type="text" class="form-control" id="topicNameInput" placeholder="DD-MM-YYYY">
+                                <label for="topicNameInput">Topic Name</label>
                             </div>
                             <div class="form-floating mb-3">
                                 <select name="Prize/Participation" class="form-select" id="prizeParticipationDropdown"
@@ -122,8 +122,9 @@
                             </div>
                             <label for="formFileLg" class="form-label">Upload Your Proof</label>
                             <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                            <span id="invalid-input" class="text-danger"></span>
                             <div class="d-grid">
-                                <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event)">
+                                <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="handleActivityFormSubmit(event);paperinVal(event)">
                                     SUBMIT
                                 </button>
 
