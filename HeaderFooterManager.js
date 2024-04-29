@@ -140,7 +140,7 @@ class SpecialHeader extends HTMLElement {
         <div class="container-fluid" style="background-color: rgb(254, 254, 254);">
             <div class="row">
                 <div class="col text-center mt-2 custom-margin-left">
-                    <h1 class="display-6">SAP CALCULATOR</h1>
+                    <!-- <h1 class="display-6">SAP CALCULATOR</h1> -->
                 </div>
 
 
