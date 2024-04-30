@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../HeaderFooterManager.js"></script>
+    <!-- Bootstrap 5.3 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
+    <!-- Bootstrap 5.3 JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+        defer></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.js" defer></script>
+    <script src="https://cdn.datatables.net/2.0.5/js/dataTables.bootstrap5.js" defer></script>
 </head>
 
 <body>
@@ -34,7 +43,24 @@
             </div>
             <div class="col-md-9">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div name="paper" class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
+                    <div name="paper" class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class="container p-3" style="margin-left: 6.8%;">
+                            <table id="paperTable" class="table table-striped" style="width:100%">
+                                <thead id="paperThead">
+                                    <tr id="paperTheadTr">
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody id="paperTbody">
+                                </tbody>
+                                <tfoot id="paperTfoot">
+                                    <tr id="paperTfootTr">
+                                        
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
                     <div name="project" class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Content for Project Presentation</div>
                     <div name="techno" class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">Content for Techno-Managerial</div>
                     <div name="sports" class="tab-pane fade" id="v-pills-sports" role="tabpanel" aria-labelledby="v-pills-sports-tab">Content for Sports</div>
@@ -62,8 +88,20 @@ function keyValueToString(obj) {
     let result = "";
     for (const key in obj) {
         if (obj.hasOwnProperty(key)) {
-            result += `<p>${key} : ${obj[key]}</p>`;
+            result += `<td>${obj[key]}</td>`;
         }
+    }
+    // Remove the trailing newline character if necessary
+    if (result.length > 0) {
+        result = result.slice(0, -1);
+    }
+        return result;
+    }
+
+function keyToString(obj) {
+    let result = "";
+    for (const key of obj) {
+        result += `<th>${key}</th>`;
     }
     // Remove the trailing newline character if necessary
     if (result.length > 0) {
@@ -77,64 +115,31 @@ function keyValueToString(obj) {
             var userDataJSON = getCookie('userData');
 
             var userData = JSON.parse(userDataJSON);
+
+            const currentUrl = document.URL;
+            
+            // Create a new URL object
+            const url = new URL(currentUrl);
+            
+            // Construct the base URL
+            const baseUrl = `${url.protocol}//${url.host}/`;
+
             
             const paperinSubmissions = userData.submissions.filter(submission => submission.activity === "paperin");
             console.log(paperinSubmissions);
-            const paperoutSubmissions = userData.submissions.filter(submission => submission.activity === "paperout");
 
-            paperPage = document.getElementsByName('paper')[0];
+            paperinSubmissions.forEach(obj => {
+                delete obj.activity
+                obj.proof = `<a href='${baseUrl}/uploads/${obj.proof}'>view proof</a>`
+            });
 
-            for (let index = 0; index < paperinSubmissions.length; index++) {
-                
-                proofImageUrl = paperinSubmissions[index].proof;
-                
-                const currentUrl = document.URL;
-                
-                // Create a new URL object
-                const url = new URL(currentUrl);
-                
-                // Construct the base URL
-                const baseUrl = `${url.protocol}//${url.host}/`;
+            document.getElementById("paperTheadTr").innerHTML = keyToString(Object.keys(paperinSubmissions[0]))
+            document.getElementById("paperTfootTr").innerHTML = keyToString(Object.keys(paperinSubmissions[0]))
 
-                delete paperinSubmissions[index].proof;
-                delete paperinSubmissions[index].activity;
-
-                const str = keyValueToString(paperinSubmissions[index]);
-
-                paperPage.innerHTML += `
-            <div class="col-md-9">
-                            <div class="row mt-5">
-                                <div class="col-md">
-                                    <ul class="list-group">
-                                        <!-- List Item 1 -->
-                                        <li class="list-group-item custom-margin-list">
-                                            <div class="row align-items-center">
-                                                <!-- Column for Image -->
-                                                <div class="col-md">
-                                                    <a href="${baseUrl+"/uploads/"+proofImageUrl}" target="_blank">
-                                                        <img src="${baseUrl+"/uploads/"+proofImageUrl}" alt="Image 1" class="img-thumbnail"
-                                                            style="max-width: 100%;">
-                                                    </a>
-                                                </div>
-                                                <!-- Column for Content -->
-                                                <div class="col-md mt-3 mt-md-0">${str}</div>
-                                                <!-- Column for Buttons -->
-                                                <div
-                                                    class="col mt-3 mt-md-0 d-flex justify-content-md-end justify-content-center align-items-center">
-                                                    <button class="btn btn-primary me-2 edit-button" type="button">Edit</button>
-                                                    <button class="btn btn-success btn-lg me-2" type="button">Submit</button>
-                                                    <button class="btn btn-danger" type="button">Delete</button>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-            `
-                
+            for (let i = 0; i < paperinSubmissions.length; i++) {
+                document.getElementById('paperTbody').innerHTML += `<tr>${keyValueToString(paperinSubmissions[i])}</tr>`
             }
-
+            $('#paperTable').DataTable();
         });
     </script>
 </body>
