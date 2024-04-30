@@ -74,7 +74,7 @@ class SpecialHeader extends HTMLElement {
 
                     <!-- Check Status -->
                     <li class="sidebar-item">
-                        <a href="checkstatus.html" class="sidebar-link">
+                        <a href="${path}checkstatus.html" class="sidebar-link">
                             <i class="bi bi-clipboard2-check" style="font-size: 1.15rem;
                             font-weight: 600px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                                     fill="currentColor" class="bi bi-clipboard2-check" viewBox="0 0 16 16">
