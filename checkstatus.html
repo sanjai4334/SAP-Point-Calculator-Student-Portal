@@ -34,18 +34,18 @@
             </div>
             <div class="col-md-9">
                 <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">Content for Paper Presentation</div>
-                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Content for Project Presentation</div>
-                    <div class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">Content for Techno-Managerial</div>
-                    <div class="tab-pane fade" id="v-pills-sports" role="tabpanel" aria-labelledby="v-pills-sports-tab">Content for Sports</div>
-                    <div class="tab-pane fade" id="v-pills-membership" role="tabpanel" aria-labelledby="v-pills-membership-tab">Content for Membership</div>
-                    <div class="tab-pane fade" id="v-pills-leadership" role="tabpanel" aria-labelledby="v-pills-leadership-tab">Content for Leadership</div>
-                    <div class="tab-pane fade" id="v-pills-courses" role="tabpanel" aria-labelledby="v-pills-courses-tab">Content for VAC/Online Courses</div>
-                    <div class="tab-pane fade" id="v-pills-copyright" role="tabpanel" aria-labelledby="v-pills-copyright-tab">Content for Patent/Copyright</div>
-                    <div class="tab-pane fade" id="v-pills-exams" role="tabpanel" aria-labelledby="v-pills-exams-tab">Content for GATE/CAT Exams</div>
-                    <div class="tab-pane fade" id="v-pills-internship" role="tabpanel" aria-labelledby="v-pills-internship-tab">Content for Internship</div>
-                    <div class="tab-pane fade" id="v-pills-entrepreneurship" role="tabpanel" aria-labelledby="v-pills-entrepreneurship-tab">Content for Entrepreneurship</div>
-                    <div class="tab-pane fade" id="v-pills-activities" role="tabpanel" aria-labelledby="v-pills-activities-tab">Content for Social Activities</div>
+                    <div name="paper" class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"></div>
+                    <div name="project" class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Content for Project Presentation</div>
+                    <div name="techno" class="tab-pane fade" id="v-pills-contact" role="tabpanel" aria-labelledby="v-pills-contact-tab">Content for Techno-Managerial</div>
+                    <div name="sports" class="tab-pane fade" id="v-pills-sports" role="tabpanel" aria-labelledby="v-pills-sports-tab">Content for Sports</div>
+                    <div name="membership" class="tab-pane fade" id="v-pills-membership" role="tabpanel" aria-labelledby="v-pills-membership-tab">Content for Membership</div>
+                    <div name="leadership" class="tab-pane fade" id="v-pills-leadership" role="tabpanel" aria-labelledby="v-pills-leadership-tab">Content for Leadership</div>
+                    <div name="courses" class="tab-pane fade" id="v-pills-courses" role="tabpanel" aria-labelledby="v-pills-courses-tab">Content for VAC/Online Courses</div>
+                    <div name="patent" class="tab-pane fade" id="v-pills-copyright" role="tabpanel" aria-labelledby="v-pills-copyright-tab">Content for Patent/Copyright</div>
+                    <div name="exams" class="tab-pane fade" id="v-pills-exams" role="tabpanel" aria-labelledby="v-pills-exams-tab">Content for GATE/CAT Exams</div>
+                    <div name="intern" class="tab-pane fade" id="v-pills-internship" role="tabpanel" aria-labelledby="v-pills-internship-tab">Content for Internship</div>
+                    <div name="entrepreneur" class="tab-pane fade" id="v-pills-entrepreneurship" role="tabpanel" aria-labelledby="v-pills-entrepreneurship-tab">Content for Entrepreneurship</div>
+                    <div name="social" class="tab-pane fade" id="v-pills-activities" role="tabpanel" aria-labelledby="v-pills-activities-tab">Content for Social Activities</div>
                 </div>
             </div>
         </div>
@@ -55,6 +55,88 @@
     <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 
     <script src="../formHandlers.js"></script>
+
+    <script>
+
+function keyValueToString(obj) {
+    let result = "";
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            result += `<p>${key} : ${obj[key]}</p>`;
+        }
+    }
+    // Remove the trailing newline character if necessary
+    if (result.length > 0) {
+        result = result.slice(0, -1);
+    }
+        return result;
+    }
+
+
+        window.addEventListener('load', (event) => {
+            var userDataJSON = getCookie('userData');
+
+            var userData = JSON.parse(userDataJSON);
+            
+            const paperinSubmissions = userData.submissions.filter(submission => submission.activity === "paperin");
+            console.log(paperinSubmissions);
+            const paperoutSubmissions = userData.submissions.filter(submission => submission.activity === "paperout");
+
+            paperPage = document.getElementsByName('paper')[0];
+
+            for (let index = 0; index < paperinSubmissions.length; index++) {
+                
+                proofImageUrl = paperinSubmissions[index].proof;
+                
+                const currentUrl = document.URL;
+                
+                // Create a new URL object
+                const url = new URL(currentUrl);
+                
+                // Construct the base URL
+                const baseUrl = `${url.protocol}//${url.host}/`;
+
+                delete paperinSubmissions[index].proof;
+                delete paperinSubmissions[index].activity;
+
+                const str = keyValueToString(paperinSubmissions[index]);
+
+                paperPage.innerHTML += `
+            <div class="col-md-9">
+                            <div class="row mt-5">
+                                <div class="col-md">
+                                    <ul class="list-group">
+                                        <!-- List Item 1 -->
+                                        <li class="list-group-item custom-margin-list">
+                                            <div class="row align-items-center">
+                                                <!-- Column for Image -->
+                                                <div class="col-md">
+                                                    <a href="${baseUrl+"/uploads/"+proofImageUrl}" target="_blank">
+                                                        <img src="${baseUrl+"/uploads/"+proofImageUrl}" alt="Image 1" class="img-thumbnail"
+                                                            style="max-width: 100%;">
+                                                    </a>
+                                                </div>
+                                                <!-- Column for Content -->
+                                                <div class="col-md mt-3 mt-md-0">${str}</div>
+                                                <!-- Column for Buttons -->
+                                                <div
+                                                    class="col mt-3 mt-md-0 d-flex justify-content-md-end justify-content-center align-items-center">
+                                                    <button class="btn btn-primary me-2 edit-button" type="button">Edit</button>
+                                                    <button class="btn btn-success btn-lg me-2" type="button">Submit</button>
+                                                    <button class="btn btn-danger" type="button">Delete</button>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            `
+                
+            }
+
+        });
+    </script>
 </body>
 
 </html>

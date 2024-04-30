@@ -209,6 +209,9 @@ async function handleActivityFormSubmit(event) {
 
         formData["points"] = await calculatePoints(event);
 
+        console.log(form);
+        formData["activity"] = form.name; // Add activity id to form data
+
         // Add the collected form data to user data object
         if (userData.submissions) {
             userData.submissions = [...userData.submissions, formData];;
@@ -267,7 +270,7 @@ async function calculatePoints(event) {
             break;
         
         case 'entrepreneur':
-            rm.querySelector('select[name="Progress level"]');
+            selectElement = form.querySelector('select[name="Progress level"]');
             selectedValue = selectElement.value;
 
             switch (selectedValue) {
