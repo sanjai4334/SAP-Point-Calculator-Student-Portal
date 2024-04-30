@@ -10,67 +10,68 @@
     <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
     <script src="../HeaderFooterManager.js"></script>
+    <style>
+        * {
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
     <special-header></special-header>
 
-            <!-- inside kec -->
-            <div class="main mt-2">
+    <!-- inside kec -->
+    <div class="main mt-2">
 
 
-                <div class="container-fluid p-2">
-                    <div class="container-fluid justify-content-center">
-    
-                        <div class="container-fluid" style="padding: 9%;">
-                            <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"
-                                class="text-center">GATE / CAT / Govt. Exams</h1>
-    
-                            <form name="examform">
-                                
-                                <div class="form-floating mb-3">
-                                    <select name="Exams" class="form-select" id="presentationDropdown" aria-label="Select presentation">
+        <div class="container" style="padding-left: 6%;">
+
+            <h1 style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" class="text-center">GATE / CAT / Govt. Exams</h1>
+
+            <form name="examform">
+
+                <div class="form-floating mb-3">
+                    <select name="Exams" class="form-select" id="presentationDropdown" aria-label="Select presentation">
                                         <option selected disabled>Select category</option>
                                         <option value="appeared">Appeared</option>
                                         <option value="qualified">Qualified in GATE / CAT</option>
                                         <option value="ranked">Good National ranking in GATE / CAT </option>
                                         <option value="cleared">Cleared Govt. Exams</option>
                                     </select>
-                                    <label for="presentationDropdown">Exams</label>
-                                </div>
-                                
-                                <label for="formFileLg" class="form-label">Upload Your Proof</label>
-                                <input class="form-control form-control mb-3" id="formFileLg" type="file">
+                    <label for="presentationDropdown">Exams</label>
+                </div>
 
-                                <span id="invalid-input" class="text-danger"></span>
+                <label for="formFileLg" class="form-label">Upload Your Proof</label>
+                <input class="form-control form-control mb-3" id="formFileLg" type="file">
 
-                                <div class="d-flex justify-content-center gap-3">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="examformval(event);handleActivityFormSubmit(event)">
+                <span id="invalid-input" class="text-danger"></span>
+
+                <div class="d-flex justify-content-center gap-3">
+                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="examformval(event);handleActivityFormSubmit(event)">
 
                                         SUBMIT
                                     </button>
-    
-                                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-3 fs-6" 
-                                    onclick="window.history.back();">CANCEL
+
+                    <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-3 fs-6" onclick="window.history.back();">CANCEL
                                     </button>
-    
-                                </div>
-                            </form>
-    
-                        </div>
-    
-                    </div>
+
                 </div>
-            </div>
-        
-        <!--end of content area-->
-        <!--End of body content-->
-        <!--end main content area -->
+            </form>
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+
+    <!--end of content area-->
+    <!--End of body content-->
+    <!--end main content area -->
 
 
-        <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.min.js"></script>
 
-        <script src="../formHandlers.js"></script>
+    <script src="../formHandlers.js"></script>
 </body>
 
 </html>
