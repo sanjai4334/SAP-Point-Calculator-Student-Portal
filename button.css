@@ -135,7 +135,8 @@ button:active {
 /* css for card -minimum height */
 
 .card {
-    min-height: 55px;
+    min-height: 290px;
+    max-height: 300px;
     /* Adjust to your desired minimum height */
 }
 
