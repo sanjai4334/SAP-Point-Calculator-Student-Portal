@@ -1,4 +1,5 @@
 /* Styles for Button 1 */
+
 .b1 {
     --border: 5px;
     /* Border width */
@@ -8,7 +9,9 @@
     /* Button color */
 }
 
+
 /* Styles for Button 2 */
+
 .b2 {
     --border: 5px;
     /* Border width */
@@ -16,16 +19,18 @@
     /* Slanted corners size */
     --color: #058d44;
     /* Button color */
-
 }
 
+
 /* Ensure the last button doesn't have extra margin */
+
 .b2:last-child {
     margin-right: 0;
 }
 
 
 /* Common styles for both buttons */
+
 .b1,
 .b2 {
     font-size: 13px;
@@ -40,32 +45,27 @@
     /* Bold font weight */
     color: var(--color);
     /* Text color */
-    background:
-        linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top right,
-        linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
+    background: linear-gradient(to bottom left, var(--color) 50%, #0000 50.1%) top right, linear-gradient(to top right, var(--color) 50%, #0000 50.1%) bottom left;
     /* Gradient background */
     background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
     /* Background size
     */
     background-repeat: no-repeat;
     /* No repeating background */
-    box-shadow:
-        0 0 0 200px inset var(--s, #0000),
-        /* Inset shadow */
-        0 0 0 var(--border) inset var(--color);
+    box-shadow: 0 0 0 200px inset var(--s, #0000), /* Inset shadow */
+    0 0 0 var(--border) inset var(--color);
     /* Border shadow */
-    clip-path:
-        polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
-            100% 100%, var(--slant) 100%, 0 calc(100% - var(--slant)));
+    clip-path: polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant), 100% 100%, var(--slant) 100%, 0 calc(100% - var(--slant)));
     /* Clip path for slanted corners */
     transition: color var(--t, 0.3s), background-size 0.3s;
     /* Transition effect */
     margin-right: 1px;
     /* space between the buttons */
-
 }
 
+
 /* Focus styles for buttons */
+
 button:focus-visible {
     outline-offset: calc(-1*var(--border));
     /* Offset outline */
@@ -77,7 +77,9 @@ button:focus-visible {
     /* Adjust background size */
 }
 
+
 /* Hover and active styles for buttons */
+
 button:hover,
 button:active {
     background-size: 100% 100%;
@@ -88,7 +90,9 @@ button:active {
     /* Transition delay */
 }
 
+
 /* Active styles for buttons */
+
 button:active {
     --s: #0005;
     /* Shadow color on active */
@@ -96,7 +100,9 @@ button:active {
     /* Remove transition */
 }
 
+
 /* Container styles for buttons */
+
 .button-container {
     display: flex;
     /* Flexbox layout */
@@ -108,9 +114,10 @@ button:active {
     /* Adjust alignment as needed */
 }
 
-/* Responsive styles for smaller screens */
-@media screen and (max-width: 600px) {
 
+/* Responsive styles for smaller screens */
+
+@media screen and (max-width: 600px) {
     .b1,
     .b2 {
         font-size: 6vw;
@@ -124,10 +131,12 @@ button:active {
     }
 }
 
+
 /* css for card -minimum height */
 
 .card {
-    min-height: 395px; /* Adjust to your desired minimum height */
+    min-height: 55px;
+    /* Adjust to your desired minimum height */
 }
 
 .card-body {
@@ -137,11 +146,13 @@ button:active {
 }
 
 .card-title {
-    flex-grow: 1; /* Allows the title to take up available space */
+    flex-grow: 1;
+    /* Allows the title to take up available space */
 }
 
 .card-text {
-    flex-grow: 1; /* Ensures space is distributed evenly */
+    flex-grow: 1;
+    /* Ensures space is distributed evenly */
 }
 
 .d-flex {
