@@ -90,8 +90,12 @@
                                 </div>
                                 <label for="formFileLg" class="form-label">Upload Your Proof</label>
                                 <input class="form-control form-control mb-3" id="formFileLg" type="file">
+
+                                <span id="invalid-input" class="text-danger"></span>
+
                                 <div class="d-flex justify-content-center gap-3">
-                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-3 fs-6" type="submit">
+                                    <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit" onclick="projectinVal(event);handleActivityFormSubmit(event)">
+
                                         SUBMIT
                                     </button>
     

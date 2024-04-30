@@ -537,3 +537,406 @@ async function calculatePoints(event) {
     
     return points;
 }
+// validation portion
+function courseVal(event) {
+    const courseType = document.getElementById("presentationDropdown").value;
+    const courseName = document.getElementById("floatingInput").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (courseType === "Select course type") {
+        errorMessage = "Please select a course type.";
+    } else if (courseName.trim() === "") {
+        errorMessage = "Please enter a course name.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function entrepreneurVal(event) {
+    const progressLevel = document.getElementById("presentationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (progressLevel === "Select level of implementation") {
+        errorMessage = "Please select a level of implementation.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function examformval(event) {
+    const examCategory = document.getElementById("presentationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+    
+    let errorMessage = "";
+
+    if (examCategory === "Select category") {
+        errorMessage = "Please select an exam category.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file."+fileInput;
+    }
+   
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function leadformVal(event) {
+    const memberIn = document.getElementById("presentationDropdown").value;
+    const position = document.getElementById("presentationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (memberIn === "Club/Association Name") {
+        errorMessage = "Please select a club or association.";
+    } else if (position === "Select position") {
+        errorMessage = "Please select a position.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function memberformVal(event) {
+    const clubName = document.getElementById("presentationDropdown").value;
+    const clubType = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (clubName === "Club/Association Name") {
+        errorMessage = "Please select a club or association.";
+    } else if (clubType === "default") {
+        errorMessage = "Please select a club type.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function paperinVal(event) {
+    const presentedAt = document.getElementById("presentationDropdown").value;
+    const presentedOn = document.getElementById("floatingInput").value;
+    const topicName = document.getElementById("floatingInput").value;
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (presentedAt === "Club/Association Name") {
+        errorMessage = "Please select a club or association.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please select a date for when the presentation was made.";
+    } else if (topicName.trim() === "") {
+        errorMessage = "Please enter the topic name.";
+    } else if (prizeParticipation === "default") {
+        errorMessage = "Please select prize/participation status.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent the form from submitting
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function paperoutVal(event) {
+    const collegeName = document.getElementById("searchInput").value.trim();
+    const premierRadio = document.getElementById("premierRadio").checked;
+    const nonPremierRadio = document.getElementById("nonPremierRadio").checked;
+    const presentedOn = document.getElementById("presentedOnInput").value;
+    const topicName = document.getElementById("topicNameInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (collegeName === "") {
+        errorMessage = "Please enter the college name.";
+    } else if (!premierRadio && !nonPremierRadio) {
+        errorMessage = "Please select Premier or Non-Premier.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please choose the presentation date.";
+    } else if (topicName === "") {
+        errorMessage = "Please enter the topic name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select prize/participation.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+    else{
+        document.getElementById("invalid-input").textContent ="";
+    }
+}
+function patentVal(event) {
+    const patentType = document.getElementById("presentationDropdown").value;
+    const submittedRadio = document.getElementById("floatingInput").checked;
+    const publishedRadio = document.getElementById("floatingInput").checked;
+    const obtainedRadio = document.getElementById("floatingInput").checked;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (patentType === "Select patent type") {
+        errorMessage = "Please select a patent type.";
+    } else if (!submittedRadio && !publishedRadio && !obtainedRadio) {
+        errorMessage = "Please select a status (submitted, published, or obtained).";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function placementVal(event) {
+    const category = document.getElementById("presentationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (category === "Select category") {
+        errorMessage = "Please select a category.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function projectinVal(event) {
+    const presentedAt = document.getElementById("presentationDropdown").value;
+    const presentedOn = document.getElementById("floatingInput").value;
+    const topicName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (presentedAt === "Club/Association Name") {
+        errorMessage = "Please select a club or association.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please select a presentation date.";
+    } else if (topicName === "") {
+        errorMessage = "Please enter the topic name.";
+    } else if (prizeParticipation === "default") {
+        errorMessage = "Please select a prize/participation status.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function projectoutVal(event) {
+    const collegeName = document.getElementById("searchInput").value.trim();
+    const premierSelected = document.getElementById("floatingInput").checked;
+    const nonPremierSelected = document.getElementById("floatingInput").checked;
+    const presentedOn = document.getElementById("floatingInput").value;
+    const topicName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (collegeName === "") {
+        errorMessage = "Please enter the college name.";
+    } else if (!premierSelected && !nonPremierSelected) {
+        errorMessage = "Please select Premier or Non-Premier.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please select a presentation date.";
+    } else if (topicName === "") {
+        errorMessage = "Please enter the topic name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select prize/participation.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function serviceformVal(event) {
+    const communityService = document.getElementById("presentationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (communityService === "Select activity") {
+        errorMessage = "Please select a community service activity.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function sportsinVal(event) {
+    const eventType = document.getElementById("presentationDropdown").value;
+    const matchOn = document.getElementById("floatingInput").value;
+    const eventName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (eventType === "Select game") {
+        errorMessage = "Please select a game.";
+    } else if (matchOn === "") {
+        errorMessage = "Please select the match date.";
+    } else if (eventName === "") {
+        errorMessage = "Please enter the event name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select a prize/participation option.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function sportsoutVal(event) {
+    const collegeName = document.getElementById("searchInput").value.trim();
+    const stateSelected = document.getElementById("floatingInput").checked;
+    const nationalSelected = document.getElementById("floatingInput").checked;
+    const eventType = document.getElementById("presentationDropdown").value;
+    const matchOn = document.getElementById("floatingInput").value;
+    const eventName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (collegeName === "") {
+        errorMessage = "Please enter the college name.";
+    } else if (!stateSelected && !nationalSelected) {
+        errorMessage = "Please select either 'State' or 'National/International'.";
+    } else if (eventType === "Select game") {
+        errorMessage = "Please select a game.";
+    } else if (matchOn === "") {
+        errorMessage = "Please select a match date.";
+    } else if (eventName === "") {
+        errorMessage = "Please enter the event name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select a prize/participation option.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}
+function techinVal(event) {
+    const eventType = document.getElementById("presentationDropdown").value;
+    const presentedOn = document.getElementById("floatingInput").value;
+    const eventName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (eventType === "Select Event type") {
+        errorMessage = "Please select an event type.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please select a presentation date.";
+    } else if (eventName === "") {
+        errorMessage = "Please enter the event name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select a prize/participation status.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display the error message
+    }
+}
+function techoutVal(event) {
+    const collegeName = document.getElementById("searchInput").value.trim();
+    const stateRadio = document.getElementById("floatingInput").checked;
+    const nationalRadio = document.getElementById("floatingInput").checked;
+    const eventType = document.getElementById("presentationDropdown").value;
+    const presentedOn = document.getElementById("floatingInput").value;
+    const topicName = document.getElementById("floatingInput").value.trim();
+    const prizeParticipation = document.getElementById("prizeParticipationDropdown").value;
+    const fileInput = document.getElementById("formFileLg").files.length;
+
+    let errorMessage = "";
+
+    if (collegeName === "") {
+        errorMessage = "Please enter the college name.";
+    } else if (!stateRadio && !nationalRadio) {
+        errorMessage = "Please select State or National/International.";
+    } else if (eventType === "Select Event type") {
+        errorMessage = "Please select an event type.";
+    } else if (presentedOn === "") {
+        errorMessage = "Please select the presentation date.";
+    } else if (topicName === "") {
+        errorMessage = "Please enter the topic name.";
+    } else if (prizeParticipation === "Select prize/participation") {
+        errorMessage = "Please select a prize/participation status.";
+    } else if (fileInput === 0) {
+        errorMessage = "Please upload your proof file.";
+    }
+
+    if (errorMessage) {
+        event.preventDefault(); // Prevent form submission
+        document.getElementById("invalid-input").textContent = errorMessage; // Display error message
+    }
+}

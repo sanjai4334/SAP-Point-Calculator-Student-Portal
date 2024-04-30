@@ -416,7 +416,7 @@
 
                         <div class="form-floating mb-3">
                             <input name="presentedOn" type="date" class="form-control" id="presentedOnInput"
-                                placeholder="DD/MM/YYYY" style="text-transform: uppercase;" required>
+                                placeholder="DD/MM/YYYY" style="text-transform: uppercase;">
                             <label for="presentedOnInput">Presented On</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -438,18 +438,17 @@
 
                         <div class="form-floating mb-3 p-2">
                             <input type="file" class="form-control" id="formFileLg" aria-describedby="fileHelp">
-                            <div id="fileHelp" class="form-text">Please upload your proof here.</div>
+                            
                             <label for="formFileLg" class="form-label">Upload Your Proof</label>
                         </div>
+                        <span id="invalid-input" class="text-danger"></span>
 
                         <div class="d-flex justify-content-center gap-3">
-                            <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-3 fs-6" type="submit">
-                                SUBMIT
-                            </button>
 
-                            <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-3 fs-6" 
-                            onclick="window.history.back();">CANCEL
-                            </button>
+                            <button class="btn btn-lg btn-primary fw-bold mb-4 mt-4 px-4 py-2 fs-6" type="submit"
+                                onclick="paperoutVal(event);handleActivityFormSubmit(event)">SUBMIT</button>
+                            <button type="button" class="btn btn-lg btn-secondary fw-bold mb-4 mt-4 px-4 py-2 fs-6"
+                                onclick="window.history.back();">CANCEL</button>
 
                         </div>
                     </form>
