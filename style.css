@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
 ::after,
 ::before {
     box-sizing: border-box;
@@ -155,7 +154,6 @@ a.sidebar-link:hover {
         margin-left: 18%;
         /* Adjust the left margin as needed */
     }
-
     .custom-margin-left-content {
         margin-left: 6.8%;
         /* Adjust the left margin as needed */
