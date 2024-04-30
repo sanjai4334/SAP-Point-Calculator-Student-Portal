@@ -14,21 +14,18 @@
     <!-- internal css -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
         @media (max-width: 576px) {
             .custom-margin-left {
                 margin-left: 6%;
                 /* Adjust the left margin as needed */
             }
-
             .custom-margin-left-content {
                 margin-left: 6.8%;
                 /* Adjust the left margin as needed */
             }
         }
-
         /* Preloader CSS */
-
+        
         .preloader {
             display: flex;
             align-items: center;
@@ -41,7 +38,7 @@
             background-color: rgba(255, 255, 255, 0.8);
             z-index: 9999;
         }
-
+        
         .sbl-cirle-to-rhombus {
             height: 12px;
             width: 12px;
@@ -53,7 +50,7 @@
             transform: rotate(45deg);
             animation: cirle-to-rhombus 1.5s .66s ease-in-out infinite;
         }
-
+        
         .sbl-cirle-to-rhombus::before,
         .sbl-cirle-to-rhombus::after {
             content: '';
@@ -65,19 +62,19 @@
             top: -5px;
             animation: cirle-to-rhombus 1.5s ease-in-out infinite;
         }
-
+        
         .sbl-cirle-to-rhombus::before {
             left: -30px;
             top: 20px;
             animation-delay: .33s;
         }
-
+        
         .sbl-cirle-to-rhombus::after {
             right: -30px;
             top: -30px;
             animation-delay: .99s;
         }
-
+        
         @keyframes cirle-to-rhombus {
             50% {
                 border-radius: 0;
@@ -107,8 +104,8 @@
                 <div class="card p-1 shadow custom-card">
                     <img src="image/paperprasentation.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Paper
-                            presentation</h5>
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Paper presentation
+                        </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="insidekec.html">
@@ -127,8 +124,8 @@
                 <div class=" card p-1 shadow">
                     <img src="image/project.jpg" class="card-img-top" alt="...">
                     <div class="card-body custom-card">
-                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Project
-                            Presentation</h5>
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Project Presentation
+                        </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="next_page.html">
@@ -166,8 +163,8 @@
                 <div class="card p-1 shadow custom-card">
                     <img src="image/sport.png" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Sports &
-                            Games</h5>
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Sports & Games
+                        </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="next_page.html">
@@ -244,8 +241,7 @@
                 <div class=" card p-1 shadow">
                     <img src="image/project.jpg" class="card-img-top" alt="...">
                     <div class="card-body custom-card">
-                        <h5 class="card-title" style="margin-bottom: 18px;">Project to
-                            Paper/Patent/Copyright
+                        <h5 class="card-title" style="margin-bottom: 18px;">Project to Paper/Patent/Copyright
                         </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
@@ -284,8 +280,8 @@
                 <div class=" card p-1 shadow">
                     <img src="image/internship.png" class="card-img-top" alt="...">
                     <div class="card-body custom-card">
-                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Placement and
-                            Internship</h5>
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Placement and Internship
+                        </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="next_page.html">
@@ -324,8 +320,8 @@
                 <div class=" card p-1 shadow">
                     <img src="image/social.png" class="card-img-top" alt="...">
                     <div class="card-body custom-card">
-                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Social
-                            activities</h5>
+                        <h5 class="card-title justify-content-center" style="margin-bottom: 41px;">Social activities
+                        </h5>
                         <p class="card-text"></p>
                         <div class="d-flex justify-content-center">
                             <a href="next_page.html">
@@ -353,7 +349,7 @@
     <!-- Script to hide preloader after activities page loaded -->
     <script>
         // Wait for the page to load completely
-        window.addEventListener('load', function () {
+        window.addEventListener('load', function() {
             // Hide the preloader
             document.querySelector('.preloader').style.display = 'none';
         });
