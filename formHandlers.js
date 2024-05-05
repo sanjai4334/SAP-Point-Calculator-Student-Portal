@@ -212,6 +212,8 @@ async function handleActivityFormSubmit(event) {
         console.log(form);
         formData["activity"] = form.name; // Add activity id to form data
 
+        userData.claimed += formData["points"];
+
         // Add the collected form data to user data object
         if (userData.submissions) {
             userData.submissions = [...userData.submissions, formData];;
@@ -225,9 +227,6 @@ async function handleActivityFormSubmit(event) {
 
         // Set the user data as a cookie
         setCookie('userData', userDataJSON, 30); // Assuming the cookie should expire in 30 days
-
-        // test
-        userData.text = true;
 
         // Update user data in the database
         updateUserDataInDatabase(userData);
